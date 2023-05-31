@@ -1,28 +1,43 @@
-import GradientText from "../Shared/GradientText/GradientText";
 import RegularButton from "../Shared/RegularButton/RegularButton";
 import RegularInput from "../Shared/RegularInput/RegularInput";
 import HeaderText from "../Shared/HeaderText/HeaderText";
 import {
   GradientTextWrapper,
   HeroWrapper,
+  PlatformText,
   RegularTextWrapper,
   RowWrapper,
 } from "./Hero.styles";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
     <HeroWrapper>
       <GradientTextWrapper>
-        <GradientText
-          text="Collaboration Platform For Developers"
-          textType="huge"
-        />
+        <PlatformText>
+          Collaboration Platform For{" "}
+          <TypeAnimation
+            sequence={[
+              "Developers",
+              2000,
+              "Designers",
+              2000,
+              "Testers",
+              2000,
+              "Enterpreneurs",
+              2000,
+            ]}
+            repeat={Infinity}
+            // deletionSpeed={90}
+            cursor={false}
+          />
+        </PlatformText>
       </GradientTextWrapper>
       <RegularTextWrapper>
         <HeaderText text="Join our beta test now and unlock a world of opportunities for professional growth, networking, and impactful collaborations." />
       </RegularTextWrapper>
       <RowWrapper>
-        <RegularInput placeholder="Input email" />
+        <RegularInput placeholder="Enter your email" />
         <RegularButton text="Join Beta" />
       </RowWrapper>
     </HeroWrapper>

@@ -4,6 +4,14 @@ export const GlobalStyle = createGlobalStyle`
     // this is the shared style
   html {
     box-sizing: border-box;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 
   *,
