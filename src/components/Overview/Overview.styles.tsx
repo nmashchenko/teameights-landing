@@ -27,6 +27,10 @@ export const RegularTextWrapper = styled.div`
 export const CardContainer = styled.div`
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px 0 15px;
 `;
 
 export const Card = styled.div`
