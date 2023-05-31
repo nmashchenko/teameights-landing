@@ -8,7 +8,7 @@ export const HeroWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 12.8%;
+  min-height: calc(100vh - 80px);
 `;
 
 export const RowWrapper = styled.div`
@@ -34,6 +34,11 @@ export const GradientTextWrapper = styled.div`
 
   @media screen and (max-width: 468px) {
     max-width: 318px;
+    min-height: 138px;
+
+    span {
+      display: block;
+    }
   }
 `;
 

@@ -8,7 +8,7 @@ export const OverviewWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 12.8%;
+  /* margin-top: 12.8%; */
 `;
 
 export const RegularTextWrapper = styled.div`
@@ -58,6 +58,7 @@ export const Description = styled.h1`
   font-weight: 400;
   font-size: 16px;
   color: ${colors.WHITE};
+  line-height: 140%;
   margin: 0;
 `;
 
@@ -76,8 +77,8 @@ export const LearnButton = styled.button`
   transition: transform 0.2s;
 
   gap: 10px;
-  &:hover {
-    transform: translateX(10px);
+  &:hover svg {
+    transform: translateX(5px);
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
   }

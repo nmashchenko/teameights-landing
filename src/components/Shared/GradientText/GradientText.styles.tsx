@@ -20,7 +20,7 @@ export const SmallText = styled.h1`
   background-clip: text;
 
   /* neon text */
-  text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
+  /* text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25); */
 `;
 
 export const MediumText = styled.h1`

@@ -24,7 +24,7 @@ const Hero = () => {
               2000,
               "Testers",
               2000,
-              "Enterpreneurs",
+              "QA Engineers",
               2000,
             ]}
             repeat={Infinity}

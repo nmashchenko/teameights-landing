@@ -1,8 +1,10 @@
+import { colors } from "@/constants/colors";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     // this is the shared style
   html {
+    font-family: Rubik;
     box-sizing: border-box;
     /* Hide scrollbar for Chrome, Safari and Opera */
     ::-webkit-scrollbar {
@@ -24,8 +26,16 @@ export const GlobalStyle = createGlobalStyle`
     background: #1A1C22;
     margin: 0;
     padding: 0;
+  }
+
+  button {
     font-family: Rubik;
   }
+  
+  input {
+  /* default */
+  caret-color: ${colors.GREEN_BRIGHT};
+}
 
   // anything else you would like to include
 `;

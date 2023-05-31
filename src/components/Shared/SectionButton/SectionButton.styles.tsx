@@ -11,6 +11,6 @@ export const Button = styled.button`
   font-weight: 400;
 
   &:hover {
-    color: ${colors.GREEN_NORMAL};
+    color: ${colors.GREEN_BRIGHT};
   }
 `;
