@@ -23,7 +23,7 @@ const Overview = () => {
       </RegularTextWrapper>
       <CardContainer>
         {overviewData.map((element, index) => (
-          <Card key={index} onClick={() => console.log(element.icon)}>
+          <Card key={index} onClick={() => console.log(1)}>
             <InfoContainer>
               <Image
                 src={element.icon}
