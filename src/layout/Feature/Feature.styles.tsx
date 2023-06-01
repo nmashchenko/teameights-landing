@@ -14,19 +14,11 @@ export const FeatureLayoutContainer = styled.div`
   margin-top: 4.8%;
   max-width: 1170px;
 
-  animation: ${_fadeIn} 1s ease-in;
-  -webkit-animation: ${_fadeIn} 1s ease-in;
+  animation: ${_fadeIn} 0.3s ease-in;
+  /* -webkit-animation: ${_fadeIn} 1s ease-in;
   -moz-animation: ${_fadeIn} 1s ease-in;
   -o-animation: ${_fadeIn} 1s ease-in;
-  -ms-animation: ${_fadeIn} 1s ease-in;
-
-  &:nth-child(1) {
-    animation-delay: 1s;
-  }
-
-  &:nth-child(2) {
-    animation-delay: 2s;
-  }
+  -ms-animation: ${_fadeIn} 1s ease-in; */
 
   @media screen and (max-width: 1280px) {
     max-width: 970px;

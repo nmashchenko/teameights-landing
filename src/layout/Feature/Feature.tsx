@@ -12,7 +12,7 @@ import { Cards } from "@/components/Shared/Interfaces/cards.interface";
 const FeatureLayout = ({ cardsData }: { cardsData: Cards }) => {
   return (
     <FeatureLayoutContainer>
-      <MainImage src={cardsData.image} alt={"Platform image"} />
+      <MainImage src={cardsData.image} alt={"Platform image"} loading="eager" />
 
       <CardsContainer>
         {cardsData.cards.map((card, index) => (
