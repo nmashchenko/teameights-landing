@@ -14,6 +14,7 @@ import { sections } from "@/constants/sections";
 import SectionButton from "../Shared/SectionButton/SectionButton";
 import MobileLogo from "@/assets/Platform/MobileLogo";
 import BurgerMenu from "@/assets/BurgerMenu/BurgerMenu";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   return (
@@ -32,7 +33,9 @@ const NavBar = () => {
       <DesktopIconsWrapper>
         <SectionWrapper gap="24px">
           {sections.map((section, index) => (
-            <SectionButton text={section.name} key={index} />
+            <Link to={section.name} smooth={true} duration={500} key={index}>
+              <SectionButton text={section.name} />
+            </Link>
           ))}
         </SectionWrapper>
         <LinkButtonsWrapper>

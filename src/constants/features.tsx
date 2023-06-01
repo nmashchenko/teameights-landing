@@ -5,7 +5,7 @@ import Trophy from "@/assets/Icons/Trophy";
 import Users from "@/assets/Icons/Users";
 import { Cards } from "@/components/Shared/Interfaces/cards.interface";
 
-import teammates from "@/assets/Images/Functionality/Teammates/Teamates.png";
+import teammates from "@/assets/Images/Functionality/Teammates/Teammates.png";
 import teammatesFilters from "@/assets/Images/Functionality/Teammates/Filters.png";
 import chat from "@/assets/Images/Functionality/Teammates/Chat.png";
 
