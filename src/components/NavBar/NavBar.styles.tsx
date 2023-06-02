@@ -29,6 +29,10 @@ export const SectionWrapper = styled.div<{ cursor?: string; gap?: string }>`
 export const DesktopLogoWrapper = styled.div`
   cursor: pointer;
   padding-bottom: 5px;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 8px;
 
   @media screen and (max-width: 1024px) {
     display: none;
@@ -40,7 +44,10 @@ export const MobileLogoWrapper = styled.div`
   display: none;
 
   @media screen and (max-width: 1024px) {
-    display: block;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    gap: 8px;
   }
 `;
 

@@ -1,5 +1,5 @@
 import { colors } from "@/constants/colors";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const HeroWrapper = styled.div`
   display: flex;
@@ -69,7 +69,7 @@ export const PlatformText = styled.h1`
         #46a11b 100%
       )
       /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-    #5bd424;
+    ${colors.GREEN_BRIGHT};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

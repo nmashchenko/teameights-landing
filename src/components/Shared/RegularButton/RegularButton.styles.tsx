@@ -4,6 +4,8 @@ import styled from "styled-components";
 export const Button = styled.button<{
   color?: string;
   background?: string;
+  width?: string;
+  height?: string;
 }>`
   display: flex;
   justify-content: center;
@@ -11,8 +13,8 @@ export const Button = styled.button<{
   padding: 0px 24px;
   gap: 6px;
 
-  width: 170px;
-  height: 48px;
+  width: ${(props) => props.width || "170px"};
+  height: ${(props) => props.height || "48px"};
 
   /* Green/Normal */
 
@@ -24,6 +26,11 @@ export const Button = styled.button<{
   border: none;
   outline: none;
   cursor: pointer;
+  transition: 0.2s ease;
+
+  :hover {
+    transform: scale(1.05);
+  }
 
   @media screen and (max-width: 768px) {
     width: 340px;

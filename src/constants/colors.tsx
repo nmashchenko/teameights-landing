@@ -4,4 +4,5 @@ export const colors = {
   GREEN_NORMAL: "#46A11B",
   GREEN_BRIGHT: "#5BD424",
   GREY_BORDER: "#2F3239",
+  BLACK_BRIGHT: "#1A1C22",
 };

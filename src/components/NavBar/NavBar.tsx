@@ -14,18 +14,18 @@ import { sections } from "@/constants/sections";
 import SectionButton from "../Shared/SectionButton/SectionButton";
 import MobileLogo from "@/assets/Platform/MobileLogo";
 import BurgerMenu from "@/assets/BurgerMenu/BurgerMenu";
-import { Link } from "react-scroll";
+import { Link, animateScroll } from "react-scroll";
 
 const NavBar = () => {
   return (
     <NavBarWrapper>
       {/* Desktop width >= 1024 */}
-      <DesktopLogoWrapper>
+      <DesktopLogoWrapper onClick={() => animateScroll.scrollToBottom()}>
         <Logo />
       </DesktopLogoWrapper>
 
       {/* Desktop width < 1024 */}
-      <MobileLogoWrapper>
+      <MobileLogoWrapper onClick={() => animateScroll.scrollToBottom()}>
         <MobileLogo />
       </MobileLogoWrapper>
 

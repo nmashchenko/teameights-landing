@@ -12,4 +12,9 @@ export const Button = styled.button`
   align-items: center;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s ease;
+
+  :hover {
+    transform: scale(1.05);
+  }
 `;

@@ -1,4 +1,5 @@
 import { colors } from "@/constants/colors";
+import { Toaster } from "react-hot-toast";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -25,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: #1A1C22;
     margin: 0;
-    padding: 0;
+    padding: 0 3% 0 3%;
   }
 
   button {
