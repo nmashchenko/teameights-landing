@@ -27,11 +27,11 @@ export const SectionWrapper = styled.div<{ cursor?: string; gap?: string }>`
 `;
 
 export const DesktopLogoWrapper = styled.div`
-  cursor: pointer;
-  padding-bottom: 5px;
-  display: flex;
-  justify-content: baseline;
+  justify-content: center;
   align-items: center;
+  cursor: pointer;
+  /* padding-bottom: 5px; */
+  display: flex;
   gap: 8px;
 
   @media screen and (max-width: 1024px) {

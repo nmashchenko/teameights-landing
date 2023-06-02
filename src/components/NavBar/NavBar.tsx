@@ -15,18 +15,26 @@ import SectionButton from "../Shared/SectionButton/SectionButton";
 import MobileLogo from "@/assets/Platform/MobileLogo";
 import BurgerMenu from "@/assets/BurgerMenu/BurgerMenu";
 import { Link, animateScroll } from "react-scroll";
+import SideNav from "./SideNav/SideNav";
+import { useEffect, useState } from "react";
+import Ukraine from "@/assets/Flags/Ukraine";
 
 const NavBar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <NavBarWrapper>
+      <SideNav open={open} setOpen={setOpen} />
       {/* Desktop width >= 1024 */}
       <DesktopLogoWrapper onClick={() => animateScroll.scrollToBottom()}>
         <Logo />
+        <Ukraine />
       </DesktopLogoWrapper>
 
       {/* Desktop width < 1024 */}
       <MobileLogoWrapper onClick={() => animateScroll.scrollToBottom()}>
         <MobileLogo />
+        <Ukraine />
       </MobileLogoWrapper>
 
       {/* Desktop width >= 1024 */}
@@ -46,7 +54,9 @@ const NavBar = () => {
       </DesktopIconsWrapper>
 
       <MobileIconsWrapper>
-        <BurgerMenu />
+        <div onClick={() => setOpen(true)}>
+          <BurgerMenu />
+        </div>
       </MobileIconsWrapper>
     </NavBarWrapper>
   );
