@@ -7,7 +7,8 @@ import {
   MemberImage,
   RegularTextWrapper,
 } from "./GetInTouch.styles";
-import RegularButton from "../Shared/RegularButton/RegularButton";
+
+import SecondaryButton from "../Shared/SecondaryButton/SecondaryButton";
 import { contactData } from "@/constants/contact";
 import { colors } from "@/constants/colors";
 import { Element } from "react-scroll";
@@ -29,13 +30,13 @@ const GetInTouch = () => {
         </RegularTextWrapper>
         <ButtonsWrapper>
           {contactData.map((data, index) => (
-            <RegularButton
+            <SecondaryButton
               icon={data.icon}
               text={data.name}
-              color={colors.BLACK_BRIGHT}
-              background={colors.WHITE}
+              color={colors.WHITE}
+              background={colors.TRANSPARENT}
               key={index}
-              width="none"
+              width="160px"
               height="40px"
             />
           ))}
