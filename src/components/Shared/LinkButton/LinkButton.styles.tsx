@@ -15,6 +15,6 @@ export const Button = styled.button`
   transition: 0.2s ease;
 
   :hover {
-    transform: scale(1.05);
+    background: ${colors.GREEN_BRIGHT};
   }
 `;
