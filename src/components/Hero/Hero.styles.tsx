@@ -26,7 +26,7 @@ export const RowWrapper = styled.div`
 
 export const GradientTextWrapper = styled.div`
   width: 100%;
-  max-width: 710px;
+  max-width: 1100px;
 
   @media screen and (max-width: 1024px) {
     max-width: 460px;
@@ -57,25 +57,29 @@ export const RegularTextWrapper = styled.div`
 
 export const PlatformText = styled.h1`
   font-weight: 600;
-  font-size: 56px;
+  font-size: 96px;
 
   text-align: center;
   margin: 0;
 
-  background: radial-gradient(
-        94.05% 4394.48% at 5.95% 11.97%,
-        #46a11b 0%,
-        #79f242 49.79%,
-        #46a11b 100%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+  /* background: radial-gradient(
+      94.05% 4394.48% at 5.95% 11.97%,
+      #46a11b 0%,
+      #79f242 49.79%,
+      #46a11b 100%
+    ),
     ${colors.GREEN_BRIGHT};
+
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  text-shadow: none; */
 
   /* neon text */
-  text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
+  //text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
 
   @media screen and (max-width: 1024px) {
     font-size: 38px;

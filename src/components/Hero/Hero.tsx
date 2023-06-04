@@ -29,7 +29,6 @@ const Hero = () => {
             ]}
             repeat={Infinity}
             // deletionSpeed={90}
-            cursor={false}
           />
         </PlatformText>
       </GradientTextWrapper>

@@ -21,7 +21,7 @@ export const Button = styled.button<{
   background: ${(props) => props.background || colors.GREEN_NORMAL};
   border-radius: 10px;
   color: ${(props) => props.color || "white"};
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 400;
   border: none;
   outline: none;

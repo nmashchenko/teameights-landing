@@ -13,7 +13,7 @@ const Features = () => {
   return (
     <Element name="Features">
       <FeaturesWrapper>
-        <GradientText text="Features" textType="medium" />
+        <GradientText text="Features" textType="huge" />
         <RegularTextWrapper>
           <HeaderText text="Our platform provides a space where you can partner with other developers to tackle exciting new projects, develop new skills and build valuable connections in the world of technology. " />
         </RegularTextWrapper>

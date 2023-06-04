@@ -19,7 +19,7 @@ const Overview = () => {
   return (
     <Element name="About">
       <OverviewWrapper>
-        <GradientText text="Overview" textType="medium" />
+        <GradientText text="Overview" textType="huge" />
         <RegularTextWrapper>
           <HeaderText text="Learn more about our dynamic platform, the diverse target audience we cater to, and the exclusive benefits of joining our beta test." />
         </RegularTextWrapper>

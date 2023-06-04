@@ -8,19 +8,22 @@ import GetInTouch from "@/components/GetInTouch/GetInTouch";
 import Waiting from "@/components/Waiting/Waiting";
 import { Toaster } from "react-hot-toast";
 import Questions from "@/components/Questions/Questions";
+import { Container } from "../layout/Basic";
 
 const Home = () => {
   return (
     <BasicLayout>
       <Toaster />
       <NavBar />
-      <Hero />
-      <Overview />
-      <Features />
-      <GetInTouch />
-      <Questions />
-      <Waiting />
-      <Footer />
+      <Container>
+        <Hero />
+        <Overview />
+        <Features />
+        <GetInTouch />
+        <Questions />
+        <Waiting />
+        <Footer />
+      </Container>
     </BasicLayout>
   );
 };
