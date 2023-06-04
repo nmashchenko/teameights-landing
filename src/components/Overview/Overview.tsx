@@ -28,8 +28,8 @@ const Overview = () => {
           {overviewData.map((element, index) => (
             //https://www.npmjs.com/package/react-parallax-tilt <-- Instructions just in case
             <Tilt
-              tiltReverse={true}
-              glareEnable={true}
+              tiltReverse={false}
+              glareEnable={false}
               glareMaxOpacity={0.1}
               glareColor="white"
               glarePosition="all"
