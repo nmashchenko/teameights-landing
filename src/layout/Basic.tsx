@@ -1,6 +1,6 @@
 import { colors } from "@/constants/colors";
 import { Toaster } from "react-hot-toast";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     // this is the shared style
@@ -21,11 +21,13 @@ export const GlobalStyle = createGlobalStyle`
   *::before,
   *::after {
     box-sizing: inherit;
+   
   }
 
   body {
     background: #1A1C22;
     margin: 0;
+    padding: 0;
   }
 
   button {
@@ -37,7 +39,24 @@ export const GlobalStyle = createGlobalStyle`
   caret-color: ${colors.GREEN_BRIGHT};
 }
 
+::-moz-selection {
+  background: #46A11B;
+ 
+}
+::-webkit-selection {
+  background: #46A11B;
+
+}
+::selection {
+  background:#46A11B;
+
+}
+
   // anything else you would like to include
+`;
+
+export const Container = styled.div`
+  padding: 0 3%;
 `;
 
 const BasicLayout = ({ children }: { children: any }) => {

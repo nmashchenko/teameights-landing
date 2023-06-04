@@ -41,7 +41,7 @@ export const Card = styled.div`
   gap: 53px;
   width: 303.33px;
   height: 320px;
-
+  background-color: #1a1c22;
   border: 2px solid ${colors.GREY_BORDER};
   border-radius: 10px;
   align-items: flex-start;

@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+import { Link, animateScroll } from "react-scroll";
 import { links } from "@/constants/links";
 import {
   DesktopIconsWrapper,
@@ -14,16 +16,38 @@ import { sections } from "@/constants/sections";
 import SectionButton from "../Shared/SectionButton/SectionButton";
 import MobileLogo from "@/assets/Platform/MobileLogo";
 import BurgerMenu from "@/assets/BurgerMenu/BurgerMenu";
-import { Link, animateScroll } from "react-scroll";
 import SideNav from "./SideNav/SideNav";
-import { useEffect, useState } from "react";
 import Ukraine from "@/assets/Flags/Ukraine";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const [navbarStyle, setNavbarStyle] = useState({});
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const wn = window.scrollY;
+      if (wn > 20) {
+        setNavbarStyle({
+          borderBottom: "thin solid rgba(255, 255, 255, 0.055)",
+
+          transitionDuration: "0.3s",
+        });
+      } else {
+        setNavbarStyle({
+          borderBottom: "thin solid rgba(255, 255, 255, 0)",
+          transitionDuration: "0.3s",
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <NavBarWrapper>
+    <NavBarWrapper style={navbarStyle}>
       <SideNav open={open} setOpen={setOpen} />
       {/* Desktop width >= 1024 */}
       <DesktopLogoWrapper onClick={() => animateScroll.scrollToBottom()}>

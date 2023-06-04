@@ -6,10 +6,16 @@ export const NavBarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px 0 50px;
+  padding: 0 3%;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  backface-visibility: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   @media screen and (max-width: 1024px) {
-    padding: 0 25px 0 25px;
+    padding: 0 9%;
   }
 `;
 

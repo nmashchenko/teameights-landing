@@ -1,6 +1,7 @@
 import RegularButton from "../Shared/RegularButton/RegularButton";
 import RegularInput from "../Shared/RegularInput/RegularInput";
 import HeaderText from "../Shared/HeaderText/HeaderText";
+
 import {
   GradientTextWrapper,
   HeroWrapper,
@@ -67,8 +68,8 @@ const Hero = () => {
               2000,
             ]}
             repeat={Infinity}
+            cursor={true}
             // deletionSpeed={90}
-            cursor={false}
           />
         </PlatformText>
       </GradientTextWrapper>

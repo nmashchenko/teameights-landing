@@ -7,7 +7,7 @@ const Questions = () => {
   return (
     <Element name="Questions">
       <QuestionsWrapper>
-        <GradientText text="Frequently asked questions" textType="medium" />
+        <GradientText text="Frequently asked questions" textType="huge" />
         <CustomizedAccordions />
       </QuestionsWrapper>
     </Element>

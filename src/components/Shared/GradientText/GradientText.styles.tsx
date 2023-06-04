@@ -9,6 +9,10 @@ export const SmallText = styled.h1`
   margin: 0;
 
   color: ${colors.GREEN_BRIGHT};
+
+  @media screen and (max-width: 468px) {
+    text-align: left;
+  }
 `;
 
 export const MediumText = styled.h1`
@@ -18,20 +22,20 @@ export const MediumText = styled.h1`
   text-align: center;
   margin: 0;
 
-  background: radial-gradient(
-        94.05% 4394.48% at 5.95% 11.97%,
-        #46a11b 0%,
-        #79f242 49.79%,
-        #46a11b 100%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-    #5bd424;
+  background: linear-gradient(
+    0deg,
+    rgba(70, 161, 27, 1) 0%,
+    rgba(121, 242, 66, 1) 87%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 
   /* neon text */
-  text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
+  //text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
+  @media screen and (max-width: 468px) {
+    text-align: left;
+  }
 `;
 
 export const LargeText = styled.h1`
@@ -41,22 +45,23 @@ export const LargeText = styled.h1`
   text-align: center;
   margin: 0;
 
-  background: radial-gradient(
-        94.05% 4394.48% at 5.95% 11.97%,
-        #46a11b 0%,
-        #79f242 49.79%,
-        #46a11b 100%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
-    #5bd424;
+  background: linear-gradient(
+    0deg,
+    rgba(70, 161, 27, 1) 0%,
+    rgba(121, 242, 66, 1) 87%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
+  background-size: 300%;
+  user-select: none;
   /* neon text */
-  text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
+  //text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
 
   @media screen and (max-width: 1024px) {
     font-size: 38px;
+  }
+
+  @media screen and (max-width: 468px) {
   }
 `;

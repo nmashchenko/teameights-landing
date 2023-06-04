@@ -18,7 +18,7 @@ const GetInTouch = () => {
   return (
     <Element name="Our Team">
       <GetInTouchWrapper>
-        <GradientText text="Get In Touch" textType="medium" />
+        <GradientText text="Get In Touch" textType="huge" />
         <RegularTextWrapper>
           <HeaderText text="Our team is made up of talented and dedicated students who are passionate about technology. We are committed to creating a platform that empowers developers to connect, collaborate, and build amazing projects together." />
         </RegularTextWrapper>

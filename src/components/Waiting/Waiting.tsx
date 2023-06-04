@@ -51,7 +51,7 @@ const Waiting = () => {
   return (
     <Element name="Help">
       <WaitingWrapper>
-        <GradientText text="So what are you waiting for? " textType="medium" />
+        <GradientText text="So what are you waiting for? " textType="huge" />
         <RegularTextWrapper>
           <HeaderText
             text="Sign up today and start exploring all that our platform has to offer!
