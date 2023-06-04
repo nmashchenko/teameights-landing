@@ -9,6 +9,10 @@ export const HeroWrapper = styled.div`
   align-items: center;
   width: 100%;
   min-height: calc(100vh - 80px);
+
+  @media screen and (max-width: 468px) {
+    align-items: left;
+  }
 `;
 
 export const RowWrapper = styled.div`
@@ -29,7 +33,7 @@ export const GradientTextWrapper = styled.div`
   max-width: 1100px;
 
   @media screen and (max-width: 1024px) {
-    max-width: 460px;
+    max-width: 450px;
   }
 
   @media screen and (max-width: 468px) {
@@ -45,6 +49,7 @@ export const GradientTextWrapper = styled.div`
 export const RegularTextWrapper = styled.div`
   width: 100%;
   max-width: 710px;
+  text-align: center;
 
   @media screen and (max-width: 1024px) {
     max-width: 510px;
@@ -52,17 +57,34 @@ export const RegularTextWrapper = styled.div`
 
   @media screen and (max-width: 468px) {
     max-width: 318px;
+    text-align: left;
   }
 `;
 
 export const PlatformText = styled.h1`
   font-weight: 600;
   font-size: 96px;
-
+  user-select: none;
   text-align: center;
   margin: 0;
 
-  /* background: radial-gradient(
+  color: #5bd424;
+
+  animation: animate 3s ease-in-out infinite running;
+
+  @keyframes animate {
+    0% {
+      color: #5bd424;
+    }
+    50% {
+      color: #79f242;
+    }
+    100% {
+      color: #5bd424;
+    }
+  }
+
+  /*background: radial-gradient(
       94.05% 4394.48% at 5.95% 11.97%,
       #46a11b 0%,
       #79f242 49.79%,
@@ -76,12 +98,16 @@ export const PlatformText = styled.h1`
 
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  text-shadow: none; */
+  text-shadow: none;*/
 
   /* neon text */
   //text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
 
   @media screen and (max-width: 1024px) {
-    font-size: 38px;
+    font-size: 60px;
+  }
+
+  @media screen and (max-width: 468px) {
+    font-size: 40px;
   }
 `;

@@ -15,7 +15,7 @@ export const NavBarWrapper = styled.div`
   z-index: 10;
 
   @media screen and (max-width: 1024px) {
-    padding: 0 3%;
+    padding: 0 9%;
   }
 `;
 

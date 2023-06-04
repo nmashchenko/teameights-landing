@@ -1,6 +1,9 @@
 import { overviewData } from "@/constants/overviewData";
 import GradientText from "../Shared/GradientText/GradientText";
 import HeaderText from "../Shared/HeaderText/HeaderText";
+import Tilt from "react-parallax-tilt";
+import React from "react";
+import ReactDOM from "react-dom";
 
 import {
   Card,
@@ -25,22 +28,32 @@ const Overview = () => {
         </RegularTextWrapper>
         <CardContainer>
           {overviewData.map((element, index) => (
-            <Card key={index} onClick={() => console.log(1)}>
-              <InfoContainer>
-                <Image
-                  src={element.icon}
-                  alt={element.alt}
-                  width={36}
-                  height={36}
-                />
-                <GradientText text={element.header} textType="small" />
-                <Description>{element.description}</Description>
-              </InfoContainer>
-              <LearnButton>
-                Learn more
-                <ArrowRight />
-              </LearnButton>
-            </Card>
+            //https://www.npmjs.com/package/react-parallax-tilt <-- Instructions just in case
+            <Tilt
+              tiltReverse={true}
+              glareEnable={true}
+              glareMaxOpacity={0.1}
+              glareColor="white"
+              glarePosition="all"
+              glareBorderRadius="10px"
+            >
+              <Card key={index} onClick={() => console.log(1)}>
+                <InfoContainer>
+                  <Image
+                    src={element.icon}
+                    alt={element.alt}
+                    width={36}
+                    height={36}
+                  />
+                  <GradientText text={element.header} textType="small" />
+                  <Description>{element.description}</Description>
+                </InfoContainer>
+                <LearnButton>
+                  Learn more
+                  <ArrowRight />
+                </LearnButton>
+              </Card>
+            </Tilt>
           ))}
         </CardContainer>
       </OverviewWrapper>

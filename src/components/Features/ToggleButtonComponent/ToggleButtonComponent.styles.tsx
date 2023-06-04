@@ -17,7 +17,7 @@ export const ToggleButton = styled.button<{
   font-weight: 400;
   font-size: 20px;
   color: ${colors.WHITE};
-  background: none;
+  background: transparent;
   outline: none;
   border: ${(props) =>
     props.active
@@ -28,6 +28,27 @@ export const ToggleButton = styled.button<{
   gap: 13px;
   cursor: pointer;
   height: 44px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 200%;
+    padding-top: 200%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease-out;
+    z-index: -1;
+  }
+
+  &:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
 
   svg {
     path {
@@ -35,6 +56,16 @@ export const ToggleButton = styled.button<{
         props.active && props.name === "Teams" && colors.GREEN_BRIGHT};
       fill: ${(props) =>
         props.active && props.name !== "Teams" && colors.GREEN_BRIGHT};
+    }
+  }
+
+  @media screen and (max-width: 468px) {
+    &:before {
+      background-color: transparent;
+    }
+
+    &:hover:before {
+      background-color: transparent;
     }
   }
 
