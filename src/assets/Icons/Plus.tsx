@@ -14,8 +14,8 @@ const Plus = () => {
         fill="white"
       />
       <path
-        fill-fillRule="evenodd"
-        clipRule-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M9 0C9.41421 0 9.75 0.335786 9.75 0.75V17.25C9.75 17.6642 9.41421 18 9 18C8.58579 18 8.25 17.6642 8.25 17.25V0.75C8.25 0.335786 8.58579 0 9 0Z"
         fill="white"
       />

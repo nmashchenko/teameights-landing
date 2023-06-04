@@ -1,4 +1,3 @@
-import { colors } from "@/constants/colors";
 import styled from "styled-components";
 
 export const WaitingWrapper = styled.div`
