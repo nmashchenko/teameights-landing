@@ -2,8 +2,6 @@ import { overviewData } from "@/constants/overviewData";
 import GradientText from "../Shared/GradientText/GradientText";
 import HeaderText from "../Shared/HeaderText/HeaderText";
 import Tilt from "react-parallax-tilt";
-import React from "react";
-import ReactDOM from "react-dom";
 
 import {
   Card,
@@ -36,6 +34,7 @@ const Overview = () => {
               glareColor="white"
               glarePosition="all"
               glareBorderRadius="10px"
+              key={index}
             >
               <Card key={index} onClick={() => console.log(1)}>
                 <InfoContainer>
