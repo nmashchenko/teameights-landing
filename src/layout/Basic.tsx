@@ -26,7 +26,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: #1A1C22;
     margin: 0;
-    padding: 0 3% 0 3%;
   }
 
   button {

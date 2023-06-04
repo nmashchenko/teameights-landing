@@ -7,6 +7,7 @@ const RegularButton = ({
   background,
   width,
   height,
+  handleClick,
 }: {
   text: string;
   icon?: any;
@@ -14,9 +15,18 @@ const RegularButton = ({
   background?: string;
   width?: string;
   height?: string;
+  handleClick?: () => void;
 }) => {
   return (
-    <Button color={color} background={background} width={width} height={height}>
+    <Button
+      color={color}
+      background={background}
+      width={width}
+      height={height}
+      onClick={() =>
+        handleClick ? handleClick() : console.log("Attach button handler")
+      }
+    >
       {icon && icon}
       {text}
     </Button>
