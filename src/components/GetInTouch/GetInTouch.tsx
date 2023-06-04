@@ -23,7 +23,7 @@ const GetInTouch = () => {
           <HeaderText text="Our team is made up of talented and dedicated students who are passionate about technology. We are committed to creating a platform that empowers developers to connect, collaborate, and build amazing projects together." />
         </RegularTextWrapper>
         <ImagesWrapper>
-          <MemberImage src={all} alt={"all"} />
+          <MemberImage src={all} alt={"all"} loading="eager" />
         </ImagesWrapper>
         <RegularTextWrapper>
           <HeaderText text="We're currently looking for developers and sponsors, who share our vision for the future of the tech industry. If you're interested in joining our team or sponsorship, please contact us to learn more about how you can get involved. " />

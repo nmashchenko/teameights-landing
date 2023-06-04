@@ -4,17 +4,14 @@ import HeaderText from "../Shared/HeaderText/HeaderText";
 import Tilt from "react-parallax-tilt";
 
 import {
-  Card,
   CardContainer,
-  Description,
-  InfoContainer,
-  LearnButton,
+  DesktopTiltContainer,
+  MobileTiltContainer,
   OverviewWrapper,
   RegularTextWrapper,
 } from "./Overview.styles";
-import Image from "next/image";
-import ArrowRight from "@/assets/Arrows/ArrowRight";
 import { Element } from "react-scroll";
+import OverviewCard from "./Card/Card";
 
 const Overview = () => {
   return (
@@ -27,32 +24,23 @@ const Overview = () => {
         <CardContainer>
           {overviewData.map((element, index) => (
             //https://www.npmjs.com/package/react-parallax-tilt <-- Instructions just in case
-            <Tilt
-              tiltReverse={false}
-              glareEnable={false}
-              glareMaxOpacity={0.1}
-              glareColor="white"
-              glarePosition="all"
-              glareBorderRadius="10px"
-              key={index}
-            >
-              <Card key={index} onClick={() => console.log(1)}>
-                <InfoContainer>
-                  <Image
-                    src={element.icon}
-                    alt={element.alt}
-                    width={36}
-                    height={36}
-                  />
-                  <GradientText text={element.header} textType="small" />
-                  <Description>{element.description}</Description>
-                </InfoContainer>
-                <LearnButton>
-                  Learn more
-                  <ArrowRight />
-                </LearnButton>
-              </Card>
-            </Tilt>
+            <>
+              <DesktopTiltContainer key={index}>
+                <Tilt
+                  tiltReverse={false}
+                  glareEnable={true}
+                  glareMaxOpacity={0.1}
+                  glareColor="white"
+                  glarePosition="all"
+                  glareBorderRadius="10px"
+                >
+                  <OverviewCard index={index} element={element} />
+                </Tilt>
+              </DesktopTiltContainer>
+              <MobileTiltContainer key={index}>
+                <OverviewCard index={index} element={element} />
+              </MobileTiltContainer>
+            </>
           ))}
         </CardContainer>
       </OverviewWrapper>

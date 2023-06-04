@@ -83,3 +83,17 @@ export const LearnButton = styled.button`
     transition: 0.2s ease-in-out;
   }
 `;
+
+export const DesktopTiltContainer = styled.div`
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+`;
+
+export const MobileTiltContainer = styled.div`
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+  }
+`;
