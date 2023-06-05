@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button<{
+export const Link = styled.a<{
   color?: string;
   background?: string;
   width?: string;
@@ -14,6 +14,8 @@ export const Button = styled.button<{
 
   width: ${(props) => props.width || "170px"};
   height: ${(props) => props.height || "48px"};
+
+  text-decoration: none;
 
   /* White Outline Secondary Button */
 

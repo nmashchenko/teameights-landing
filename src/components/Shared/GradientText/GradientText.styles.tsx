@@ -61,7 +61,4 @@ export const LargeText = styled.h1`
   @media screen and (max-width: 1024px) {
     font-size: 38px;
   }
-
-  @media screen and (max-width: 468px) {
-  }
 `;

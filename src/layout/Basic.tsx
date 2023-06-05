@@ -1,9 +1,8 @@
 import { colors } from "@/constants/colors";
-import { Toaster } from "react-hot-toast";
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-    // this is the shared style
+  // this is the shared style
   html {
     font-family: Rubik;
     box-sizing: border-box;
@@ -21,11 +20,10 @@ export const GlobalStyle = createGlobalStyle`
   *::before,
   *::after {
     box-sizing: inherit;
-   
   }
 
   body {
-    background: #1A1C22;
+    background: ${colors.BLACK_BRIGHT};
     margin: 0;
     padding: 0;
   }
@@ -37,22 +35,17 @@ export const GlobalStyle = createGlobalStyle`
   input {
   /* default */
   caret-color: ${colors.GREEN_BRIGHT};
-}
+  }
 
-::-moz-selection {
-  background: #46A11B;
- 
-}
-::-webkit-selection {
-  background: #46A11B;
-
-}
-::selection {
-  background:#46A11B;
-
-}
-
-  // anything else you would like to include
+  ::-moz-selection {
+    background: ${colors.GREEN_NORMAL};
+  }
+  ::-webkit-selection {
+    background: ${colors.GREEN_NORMAL};
+  }
+  ::selection {
+    background: ${colors.GREEN_NORMAL};
+  }
 `;
 
 export const Container = styled.div`

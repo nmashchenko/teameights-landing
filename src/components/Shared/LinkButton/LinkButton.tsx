@@ -1,4 +1,4 @@
-import { randomUUID } from "crypto";
+import { colors } from "@/constants/colors";
 import { Button } from "./LinkButton.styles";
 import { toast } from "react-hot-toast";
 
@@ -9,7 +9,7 @@ const LinkButton = ({ icon }: { icon: any }) => {
         toast("Coming soon!", {
           id: "1",
           duration: 700,
-          style: { background: "#2F3239", color: "white" },
+          style: { background: colors.GREY_BORDER, color: colors.WHITE },
           icon: "⚡️",
         })
       }

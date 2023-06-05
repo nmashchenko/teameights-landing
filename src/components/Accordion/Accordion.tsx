@@ -10,7 +10,7 @@ import {
 import { questions } from "@/constants/questions";
 
 export default function CustomizedAccordions() {
-  const [expanded, setExpanded] = useState<string | false>("q1");
+  const [expanded, setExpanded] = useState<string | false>("");
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {

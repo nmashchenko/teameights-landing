@@ -11,45 +11,12 @@ import {
 } from "./Hero.styles";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
-import axios from "axios";
-import { toast } from "react-hot-toast";
+import { useSubmitEmail } from "@/api/hooks/useSubmitEmail";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = async () => {
-    toast.promise(
-      axios.post(
-        "https://teameights-server.herokuapp.com/api/users/beta/sign-up",
-        { email }
-      ),
-      {
-        loading: "Loading",
-        success: (data) => {
-          // Clear the email input field
-          setEmail("");
-          return "Welcome to Team8s!";
-        },
-        error: (err) => {
-          console.log(err);
-          if (err?.response?.status === 400) {
-            return `${err.response?.data[0]?.split("-")[1]?.toString()}`;
-          } else if (err?.response?.status === 429) {
-            return `${err.response?.data?.message?.toString()}`;
-          }
-
-          return `Something wrong happened, try again later!`;
-        },
-      },
-      {
-        id: "beta/sign-up",
-        style: { background: "#2F3239", color: "white" },
-        success: {
-          duration: 3000,
-        },
-      }
-    );
-  };
+  const handleSubmit = useSubmitEmail(email, setEmail);
 
   return (
     <HeroWrapper>
@@ -68,8 +35,6 @@ const Hero = () => {
               2000,
             ]}
             repeat={Infinity}
-            cursor={true}
-            // deletionSpeed={90}
           />
         </PlatformText>
       </GradientTextWrapper>

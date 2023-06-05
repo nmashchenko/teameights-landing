@@ -51,8 +51,8 @@ export const Description = styled.h1`
 
 export const Accordion = muistyled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-  borderBottom: `1px solid #2F3239`,
+))(() => ({
+  borderBottom: `1px solid ${colors.GREY_BORDER}`,
   background: "inherit",
   "&:not(:last-child)": {
     borderBottom: 0,
@@ -65,12 +65,12 @@ export const Accordion = muistyled((props: AccordionProps) => (
 
 export const AccordionSummary = muistyled((props: AccordionSummaryProps) => (
   <MuiAccordionSummary expandIcon={<Plus />} {...props} />
-))(({ theme }) => ({
+))(() => ({
   padding: 0,
   background: "inherit",
   color: colors.WHITE,
 }));
 
-export const AccordionDetails = muistyled(MuiAccordionDetails)(({ theme }) => ({
+export const AccordionDetails = muistyled(MuiAccordionDetails)(() => ({
   padding: "0 0 10px 0",
 }));

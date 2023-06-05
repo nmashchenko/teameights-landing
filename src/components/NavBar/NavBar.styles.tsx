@@ -6,7 +6,7 @@ export const NavBarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3%;
+  padding: 0 55px;
   background: transparent;
   backdrop-filter: blur(5px);
   backface-visibility: hidden;
@@ -15,7 +15,7 @@ export const NavBarWrapper = styled.div`
   z-index: 10;
 
   @media screen and (max-width: 1024px) {
-    padding: 0 2.2%;
+    padding: 0 24px;
   }
 `;
 

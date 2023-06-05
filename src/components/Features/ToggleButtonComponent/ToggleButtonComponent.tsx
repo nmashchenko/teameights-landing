@@ -10,7 +10,7 @@ const ToggleButtonComponent = ({
   setActive,
 }: {
   active: string;
-  setActive: Function;
+  setActive: (T: string) => void;
 }) => {
   const [screenWidth, setScreenWidth] = useState(0);
 
@@ -40,7 +40,7 @@ const ToggleButtonComponent = ({
           key={index}
           active={active === feature.name}
           name={feature.name}
-          onClick={(e) => setActive(feature.name)}
+          onClick={() => setActive(feature.name)}
         >
           {feature.icon}
           {screenWidth > 567 && feature.name}

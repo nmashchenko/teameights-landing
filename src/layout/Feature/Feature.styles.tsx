@@ -15,10 +15,10 @@ export const FeatureLayoutContainer = styled.div`
   max-width: 1170px;
 
   animation: ${_fadeIn} 0.3s ease-in;
-  /* -webkit-animation: ${_fadeIn} 1s ease-in;
-  -moz-animation: ${_fadeIn} 1s ease-in;
-  -o-animation: ${_fadeIn} 1s ease-in;
-  -ms-animation: ${_fadeIn} 1s ease-in; */
+  -webkit-animation: ${_fadeIn} 0.3s ease-in;
+  -moz-animation: ${_fadeIn} 0.3s ease-in;
+  -o-animation: ${_fadeIn} 0.3s ease-in;
+  -ms-animation: ${_fadeIn} 0.3s ease-in;
 
   @media screen and (max-width: 1280px) {
     max-width: 970px;

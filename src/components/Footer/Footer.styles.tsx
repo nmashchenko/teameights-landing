@@ -1,3 +1,4 @@
+import { colors } from "@/constants/colors";
 import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
@@ -31,6 +32,6 @@ export const LinkButtonsWrapper = styled.div`
 export const Copyrights = styled.h1`
   font-weight: 400;
   font-size: 16px;
-  color: #8f9094;
+  color: ${colors.GREY_NORMAL};
   margin: 0;
 `;

@@ -1,16 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
 
-export const GetInTouchWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 12.8%;
-`;
-
 export const RegularTextWrapper = styled.div`
   width: 100%;
   max-width: 710px;

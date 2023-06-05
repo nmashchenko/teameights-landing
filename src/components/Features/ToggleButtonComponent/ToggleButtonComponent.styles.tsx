@@ -68,9 +68,4 @@ export const ToggleButton = styled.button<{
       background-color: transparent;
     }
   }
-
-  /* @media screen and (max-width: 568px) {
-    text-indent: -9000px;
-    text-transform: capitalize;
-  } */
 `;

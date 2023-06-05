@@ -1,14 +1,13 @@
-import { colors } from "@/constants/colors";
 import styled from "styled-components";
 
-export const FeaturesWrapper = styled.div`
+export const SectionWrapper = styled.div<{ marginTop?: string }>`
   display: flex;
   flex-direction: column;
   gap: 24px;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 12.8%;
+  margin-top: ${(props) => (props.marginTop ? props.marginTop : "12.8%")};
 `;
 
 export const RegularTextWrapper = styled.div`
