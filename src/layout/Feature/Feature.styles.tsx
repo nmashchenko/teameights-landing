@@ -56,7 +56,7 @@ export const Card = styled.div`
   width: auto;
   height: auto;
 
-  border: 2px solid #2f3239;
+  border: 2px solid ${colors.GREY_BORDER};
   border-radius: 10px;
 
   max-width: 570px;
@@ -87,7 +87,7 @@ export const MainImage = styled(Image)`
   height: auto;
   object-fit: contain;
   object-position: bottom;
-  border: 2px solid #2f3239;
+  border: 2px solid ${colors.GREY_BORDER};
   border-radius: 10px;
 `;
 

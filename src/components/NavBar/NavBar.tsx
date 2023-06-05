@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, animateScroll } from "react-scroll";
 import { links } from "@/constants/links";
 import {
