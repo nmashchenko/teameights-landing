@@ -6,6 +6,7 @@ export const links = [
   {
     name: "Discord",
     icon: <Discord />,
+    link: "https://discord.gg/jWZDmMZJSV",
   },
   {
     name: "Github",
@@ -14,5 +15,6 @@ export const links = [
   {
     name: "Tiktok",
     icon: <Tiktok />,
+    link: "https://www.tiktok.com/@teameights_",
   },
 ];

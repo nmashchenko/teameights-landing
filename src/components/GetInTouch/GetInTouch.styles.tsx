@@ -15,13 +15,13 @@ export const RegularTextWrapper = styled.div`
 `;
 
 export const MemberImage = styled(Image)`
-  width: 510px;
+  width: 584px;
   height: 110px;
   object-fit: contain;
 
   @media screen and (max-width: 568px) {
-    width: 390px;
-    height: 90px;
+    width: 350px;
+    height: 80px;
   }
 
   @media screen and (max-width: 468px) {
@@ -34,13 +34,14 @@ export const ImagesWrapper = styled.div``;
 
 export const ButtonsWrapper = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 16px;
 
   @media screen and (max-width: 768px) {
     max-width: 325px;
   }
 
   @media screen and (max-width: 468px) {
-    max-width: 350px;
+    max-width: 300px;
+    gap: 8px;
   }
 `;

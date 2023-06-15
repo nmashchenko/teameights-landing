@@ -7,7 +7,11 @@ export const SectionWrapper = styled.div<{ marginTop?: string }>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: ${(props) => (props.marginTop ? props.marginTop : "12.8%")};
+  margin-top: ${(props) => (props.marginTop ? props.marginTop : "160px")};
+
+  @media screen and (max-width: 1024px) {
+    margin-top: ${(props) => (props.marginTop ? props.marginTop : "80px")};
+  }
 `;
 
 export const RegularTextWrapper = styled.div`

@@ -3,7 +3,7 @@ import {
   ToggleButtonsContainer,
   ToggleButton,
 } from "./ToggleButtonComponent.styles";
-import { useEffect, useState } from "react";
+import { useGetScreenWidth } from "@/hooks/useGetScreenWidth";
 
 const ToggleButtonComponent = ({
   active,
@@ -12,26 +12,7 @@ const ToggleButtonComponent = ({
   active: string;
   setActive: (T: string) => void;
 }) => {
-  const [screenWidth, setScreenWidth] = useState(0);
-
-  useEffect(function onFirstMount() {
-    setScreenWidth(window.innerWidth);
-  }, []);
-
-  useEffect(() => {
-    // Function to update the screen width state
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    // Event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const screenWidth = useGetScreenWidth();
 
   return (
     <ToggleButtonsContainer>
@@ -43,7 +24,7 @@ const ToggleButtonComponent = ({
           onClick={() => setActive(feature.name)}
         >
           {feature.icon}
-          {screenWidth > 567 && feature.name}
+          {screenWidth > 568 && feature.name}
         </ToggleButton>
       ))}
     </ToggleButtonsContainer>

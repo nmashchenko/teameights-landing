@@ -1,10 +1,9 @@
+import { colors } from "@/constants/colors";
 import styled from "styled-components";
 
 export const Link = styled.a<{
   color?: string;
   background?: string;
-  width?: string;
-  height?: string;
 }>`
   display: flex;
   justify-content: center;
@@ -12,20 +11,20 @@ export const Link = styled.a<{
   padding: 0px 1.5rem;
   gap: 0.375rem;
 
-  width: ${(props) => props.width || "170px"};
-  height: ${(props) => props.height || "48px"};
+  width: 164px;
+  height: 48px;
 
   text-decoration: none;
 
   /* White Outline Secondary Button */
 
   background-color: transparent;
-  border-radius: 25px;
+  border-radius: 10px;
   color: ${(props) => props.color || "white"};
   font-size: 1.25rem;
   font-weight: 400;
-  border: none;
-  outline: 1px solid white;
+  border: 2px solid ${colors.GREEN_NORMAL};
+  /* outline: 1px solid white; */
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
@@ -49,11 +48,7 @@ export const Link = styled.a<{
     transform: translate(-50%, -50%) scale(1);
   }
 
-  @media screen and (max-width: 768px) {
-    width: 340px;
-  }
-
   @media screen and (max-width: 468px) {
-    max-width: 318px;
+    max-width: 143px;
   }
 `;

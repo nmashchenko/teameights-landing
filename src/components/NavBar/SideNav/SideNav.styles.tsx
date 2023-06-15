@@ -1,8 +1,9 @@
 import { colors } from "@/constants/colors";
 import styled from "styled-components";
 
-export const SideNavWrapper = styled.div<{ open: boolean }>`
+export const SideNavWrapper = styled.div<{ open: boolean; height: number }>`
   height: 100vh;
+  height: ${(props) => `${props.height}px`};
   width: ${(props) => (props.open ? "100%" : 0)};
   position: fixed;
   z-index: 9999;

@@ -16,10 +16,12 @@ const OverviewCard = ({ element }: { element: any }) => {
         <GradientText text={element.header} textType="small" />
         <Description>{element.description}</Description>
       </InfoContainer>
-      <LearnButton>
-        Learn more
-        <ArrowRight />
-      </LearnButton>
+      <div>
+        <LearnButton>
+          Learn more
+          <ArrowRight />
+        </LearnButton>
+      </div>
     </Card>
   );
 };

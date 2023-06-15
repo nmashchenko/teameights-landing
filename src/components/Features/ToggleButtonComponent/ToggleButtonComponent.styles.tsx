@@ -5,6 +5,11 @@ export const ToggleButtonsContainer = styled.div`
   display: flex;
   gap: 16px;
   margin-top: 20px;
+
+  @media screen and (max-width: 568px) {
+    max-width: 328px;
+    width: 100%;
+  }
 `;
 
 export const ToggleButton = styled.button<{
@@ -57,6 +62,10 @@ export const ToggleButton = styled.button<{
       fill: ${(props) =>
         props.active && props.name !== "Teams" && colors.GREEN_BRIGHT};
     }
+  }
+
+  @media screen and (max-width: 568px) {
+    width: 100%;
   }
 
   @media screen and (max-width: 468px) {

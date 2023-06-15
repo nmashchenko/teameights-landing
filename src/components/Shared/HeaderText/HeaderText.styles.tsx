@@ -13,7 +13,4 @@ export const Text = styled.h1`
   @media screen and (max-width: 1024px) {
     font-size: 16px;
   }
-
-  @media screen and (max-width: 468px) {
-  }
 `;

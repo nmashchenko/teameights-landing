@@ -1,12 +1,15 @@
 export const sections = [
   {
-    name: "About",
+    name: "Overview",
   },
   {
     name: "Features",
   },
   {
-    name: "Our Team",
+    name: "Get in touch",
+  },
+  {
+    name: "FAQ",
   },
   {
     name: "Help",

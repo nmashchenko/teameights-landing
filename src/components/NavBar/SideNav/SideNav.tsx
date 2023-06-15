@@ -11,6 +11,7 @@ import { sections } from "@/constants/sections";
 import { links } from "@/constants/links";
 import LinkButton from "@/components/Shared/LinkButton/LinkButton";
 import { Link } from "react-scroll";
+import { useGetHeight } from "@/hooks/useGetHeight";
 
 const SideNav = ({
   open,
@@ -19,12 +20,9 @@ const SideNav = ({
   open: boolean;
   setOpen: (T: boolean) => void;
 }) => {
+  const height = useGetHeight();
   return (
-    <SideNavWrapper open={open}>
-      {/* <MobileLogoWrapper open={open}>
-        <MobileLogo />
-        <Ukraine />
-      </MobileLogoWrapper> */}
+    <SideNavWrapper open={open} height={height}>
       <CloseBtn onClick={() => setOpen(false)} open={open}>
         <Close />
       </CloseBtn>
@@ -32,8 +30,9 @@ const SideNav = ({
         <Link
           to={section.name}
           smooth={true}
-          duration={500}
+          duration={800}
           key={index}
+          offset={-80}
           onClick={() => setOpen(false)}
         >
           <LinkText key={index} open={open}>
@@ -44,7 +43,7 @@ const SideNav = ({
       <BottomWrapper open={open}>
         <LinkButtonsWrapper>
           {links.map((link) => (
-            <LinkButton icon={link.icon} key={link.name} />
+            <LinkButton icon={link.icon} key={link.name} dimensions="40px" />
           ))}
         </LinkButtonsWrapper>
         <Copyrights open={open}>Copyright© 2023 Teameights</Copyrights>

@@ -4,7 +4,7 @@ import SectionLayout from "@/layout/Section/Section";
 const Questions = () => {
   return (
     <SectionLayout
-      name="Questions"
+      name="FAQ"
       headerText="Frequently asked questions"
       withDescription={false}
     >

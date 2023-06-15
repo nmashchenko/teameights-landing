@@ -5,8 +5,6 @@ const ContactLink = ({
   icon,
   color,
   background,
-  width,
-  height,
   href,
 }: {
   text: string;
@@ -18,14 +16,8 @@ const ContactLink = ({
   height?: string;
 }) => {
   return (
-    <Link
-      color={color}
-      background={background}
-      width={width}
-      height={height}
-      href={href}
-    >
-      {icon && icon}
+    <Link color={color} background={background} href={href}>
+      {icon}
       {text}
     </Link>
   );

@@ -56,7 +56,7 @@ const NavBar = () => {
         </SectionWrapper>
         <LinkButtonsWrapper>
           {links.map((link) => (
-            <LinkButton icon={link.icon} key={link.name} />
+            <LinkButton icon={link.icon} key={link.name} link={link?.link} />
           ))}
         </LinkButtonsWrapper>
       </DesktopIconsWrapper>

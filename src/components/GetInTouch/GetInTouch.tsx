@@ -9,13 +9,13 @@ import {
 import ContactLink from "../Shared/ContactLink/ContactLink";
 import { contactData } from "@/constants/contact";
 import { colors } from "@/constants/colors";
-import all from "@/assets/Images/Team/All.png";
+import all from "@/assets/Images/Team/Team.png";
 import SectionLayout from "@/layout/Section/Section";
 
 const GetInTouch = () => {
   return (
     <SectionLayout
-      name="Our Team"
+      name="Get in touch"
       headerText="Get In Touch"
       description="Our team is made up of talented and dedicated students who are passionate about technology. We are committed to creating a platform that empowers developers to connect, collaborate, and build amazing projects together."
       withDescription={true}

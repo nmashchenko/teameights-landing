@@ -13,7 +13,7 @@ import SectionLayout from "@/layout/Section/Section";
 const Overview = () => {
   return (
     <SectionLayout
-      name="About"
+      name="Overview"
       headerText="Overview"
       description="Learn more about our dynamic platform, the diverse target audience we cater to, and the exclusive benefits of joining our beta test."
       withDescription={true}

@@ -52,6 +52,7 @@ export const LearnButton = styled.button`
   color: ${colors.WHITE};
   -webkit-transition: transform 0.2s;
   transition: transform 0.2s;
+  padding: 0;
 
   gap: 10px;
   &:hover svg {

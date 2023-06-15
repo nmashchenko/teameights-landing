@@ -3,10 +3,10 @@ import styled from "styled-components";
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
 import Plus from "@/assets/Icons/Plus";
 import { styled as muistyled } from "@mui/material/styles";
-import MuiAccordionSummary, {
-  AccordionSummaryProps,
-} from "@mui/material/AccordionSummary";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import { CustomAccordionSummaryProps } from "./accordion.interface";
+import Minus from "@/assets/Icons/Minus";
 
 export const AccordionWrapper = styled.div`
   max-width: 1170px;
@@ -61,11 +61,22 @@ export const Accordion = muistyled((props: AccordionProps) => (
   "&:before": {
     display: "none",
   },
+
+  "&:hover": {
+    svg: {
+      stroke: colors.GREEN_BRIGHT,
+    },
+  },
 }));
 
-export const AccordionSummary = muistyled((props: AccordionSummaryProps) => (
-  <MuiAccordionSummary expandIcon={<Plus />} {...props} />
-))(() => ({
+export const AccordionSummary = muistyled(
+  (props: CustomAccordionSummaryProps) => (
+    <MuiAccordionSummary
+      expandIcon={props.expanded ? <Minus /> : <Plus />}
+      {...props}
+    />
+  )
+)(() => ({
   padding: 0,
   background: "inherit",
   color: colors.WHITE,
