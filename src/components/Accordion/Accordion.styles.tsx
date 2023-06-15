@@ -72,7 +72,7 @@ export const Accordion = muistyled((props: AccordionProps) => (
 export const AccordionSummary = muistyled(
   (props: CustomAccordionSummaryProps) => (
     <MuiAccordionSummary
-      expandIcon={props.expanded ? <Minus /> : <Plus />}
+      expandIcon={props.expanded === "true" ? <Minus /> : <Plus />}
       {...props}
     />
   )

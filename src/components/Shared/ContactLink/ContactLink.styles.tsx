@@ -8,7 +8,6 @@ export const Link = styled.a<{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 1.5rem;
   gap: 0.375rem;
 
   width: 164px;

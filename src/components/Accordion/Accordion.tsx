@@ -28,7 +28,7 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel1d-content"
               id="panel1d-header"
-              expanded={expanded === question.questionName}
+              expanded={(expanded === question.questionName).toString()}
             >
               <SummaryText>{question.summary}</SummaryText>
             </AccordionSummary>

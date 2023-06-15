@@ -16,6 +16,7 @@ export const Button = styled.button<{ dimensions: string }>`
   cursor: pointer;
   transition: 0.2s ease;
   text-decoration: none;
+  padding: 0;
 
   :hover {
     background: ${colors.GREEN_BRIGHT};

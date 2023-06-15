@@ -43,7 +43,12 @@ const SideNav = ({
       <BottomWrapper open={open}>
         <LinkButtonsWrapper>
           {links.map((link) => (
-            <LinkButton icon={link.icon} key={link.name} dimensions="40px" />
+            <LinkButton
+              icon={link.icon}
+              key={link.name}
+              dimensions="40px"
+              link={link?.link}
+            />
           ))}
         </LinkButtonsWrapper>
         <Copyrights open={open}>Copyright© 2023 Teameights</Copyrights>
