@@ -6,6 +6,7 @@ export const useGetHeight = () => {
   useEffect(() => {
     const handleResize = () => {
       const { clientHeight } = document.documentElement;
+      console.log(clientHeight);
       setHeight(clientHeight);
     };
 
