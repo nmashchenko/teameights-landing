@@ -1,14 +1,15 @@
 import RegularButton from "../Shared/RegularButton/RegularButton";
 import RegularInput from "../Shared/RegularInput/RegularInput";
-import { RowWrapper } from "./Waiting.styles";
+import { RowWrapper, canvasStyles } from "./Waiting.styles";
 import { useState } from "react";
 import { useSubmitEmail } from "@/api/hooks/useSubmitEmail";
 import SectionLayout from "@/layout/Section/Section";
+import ReactCanvasConfetti from "react-canvas-confetti";
 
 const Waiting = () => {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = useSubmitEmail(email, setEmail);
+  const { handleSubmit, getInstance } = useSubmitEmail(email, setEmail);
 
   return (
     <SectionLayout
@@ -24,6 +25,7 @@ const Waiting = () => {
           setData={setEmail}
         />
         <RegularButton text="Join Beta" handleClick={handleSubmit} />
+        <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
       </RowWrapper>
     </SectionLayout>
   );

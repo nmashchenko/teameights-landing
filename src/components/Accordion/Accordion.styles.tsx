@@ -64,7 +64,7 @@ export const Accordion = muistyled((props: AccordionProps) => (
 
   "&:hover": {
     svg: {
-      stroke: colors.GREEN_BRIGHT,
+      fill: colors.GREEN_BRIGHT,
     },
   },
 }));

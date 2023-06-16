@@ -8,15 +8,17 @@ import {
   PlatformText,
   RegularTextWrapper,
   RowWrapper,
+  canvasStyles,
 } from "./Hero.styles";
 import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import { useSubmitEmail } from "@/api/hooks/useSubmitEmail";
+import ReactCanvasConfetti from "react-canvas-confetti";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = useSubmitEmail(email, setEmail);
+  const { handleSubmit, getInstance } = useSubmitEmail(email, setEmail);
 
   return (
     <HeroWrapper>
@@ -48,6 +50,7 @@ const Hero = () => {
           setData={setEmail}
         />
         <RegularButton text="Join Beta" handleClick={handleSubmit} />
+        <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
       </RowWrapper>
     </HeroWrapper>
   );

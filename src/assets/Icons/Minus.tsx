@@ -4,14 +4,10 @@ const Minus = () => {
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#ffffff"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill="#ffffff"
+      viewBox="0 0 256 256"
     >
-      <line x1="5" x2="19" y1="12" y2="12" />
+      <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"></path>
     </svg>
   );
 };

@@ -40,7 +40,7 @@ export const MediumText = styled.h1`
 
 export const LargeText = styled.h1`
   font-weight: 600;
-  font-size: 56px;
+  font-size: 48px;
 
   text-align: center;
   margin: 0;
