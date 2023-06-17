@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SectionWrapper = styled.div<{ marginTop?: string }>`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   justify-content: center;
   align-items: center;
   width: 100%;
