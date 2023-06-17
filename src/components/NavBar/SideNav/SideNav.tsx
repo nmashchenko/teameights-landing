@@ -26,7 +26,7 @@ const SideNav = ({
       <CloseBtn onClick={() => setOpen(false)} open={open}>
         <Close />
       </CloseBtn>
-      {sections.map((section, index) => (
+      {sections.slice(0, -1).map((section, index) => (
         <Link
           to={section.name}
           smooth={true}

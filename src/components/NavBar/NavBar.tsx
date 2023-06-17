@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, MouseEvent } from "react";
 import { Link, animateScroll } from "react-scroll";
 import { links } from "@/constants/links";
 import {
@@ -19,11 +19,23 @@ import BurgerMenu from "@/assets/BurgerMenu/BurgerMenu";
 import SideNav from "./SideNav/SideNav";
 import Ukraine from "@/assets/Flags/Ukraine";
 import { useHandleScroll } from "@/hooks/useHandleScroll";
+import Hover from "./Popover/Popover";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const navbarStyle = useHandleScroll();
 
+  const [anchorEl, setAnchorEl] = React.useState<HTMLDivElement | null>(null);
+
+  const openPopover = Boolean(anchorEl);
+
+  const handlePopoverOpen = (event: React.MouseEvent<HTMLDivElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <NavBarWrapper style={navbarStyle}>
       <SideNav open={open} setOpen={setOpen} />
@@ -50,7 +62,23 @@ const NavBar = () => {
               key={index}
               offset={-80}
             >
-              <SectionButton text={section.name} />
+              {section.name === "Help" ? (
+                <div
+                  onMouseEnter={(event: MouseEvent<HTMLDivElement>) =>
+                    handlePopoverOpen(event)
+                  }
+                  onMouseLeave={handlePopoverClose}
+                >
+                  <SectionButton text={section.name} />
+                  <Hover
+                    anchorEl={anchorEl}
+                    handlePopoverClose={handlePopoverClose}
+                    open={openPopover}
+                  />
+                </div>
+              ) : (
+                <SectionButton text={section.name} />
+              )}
             </Link>
           ))}
         </SectionWrapper>

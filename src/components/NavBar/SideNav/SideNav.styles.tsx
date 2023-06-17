@@ -26,6 +26,10 @@ export const LinkText = styled.h1<{ open: boolean }>`
   color: ${colors.WHITE};
   cursor: pointer;
   opacity: ${(props) => (props.open ? 1 : 0)};
+
+  :hover {
+    color: ${colors.GREEN_BRIGHT};
+  }
 `;
 
 export const Copyrights = styled.h1<{ open: boolean }>`
@@ -42,6 +46,14 @@ export const CloseBtn = styled.div<{ open: boolean }>`
   right: 30px;
   top: 30px;
   opacity: ${(props) => (props.open ? 1 : 0)};
+
+  :hover {
+    svg {
+      path {
+        stroke: ${colors.RED_ERROR};
+      }
+    }
+  }
 `;
 
 export const MobileLogoWrapper = styled.div<{ open: boolean }>`

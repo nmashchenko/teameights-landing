@@ -7,5 +7,6 @@ export const colors = {
   GREEN_ULTRA_BRIGHT: "#79f242",
   GREY_BORDER: "#2F3239",
   BLACK_BRIGHT: "#1A1C22",
+  RED_ERROR: "#D42422",
   TRANSPARENT: "rgba(255, 0, 0, 0)",
 };

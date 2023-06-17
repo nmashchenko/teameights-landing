@@ -13,7 +13,7 @@ const Waiting = () => {
 
   return (
     <SectionLayout
-      name="Help"
+      name="Waiting"
       headerText="So what are you waiting for?"
       description="Sign up today and start exploring all that our platform has to offer!"
       withDescription={true}

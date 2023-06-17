@@ -49,11 +49,21 @@ export const useSubmitEmail = (email: string, setEmail: (T: any) => void) => {
   }, [makeShot]);
 
   const handleSubmit = () => {
+    const params = { email: email };
+
+    const s3EmailPromise = axios
+      .post("https://teameights-server.herokuapp.com/api/users/beta/sign-up", {
+        email,
+      })
+      .then((response) => {
+        console.log(response);
+        // The first request succeeded
+        axios.post("/api/send", params).then((res) => console.log(res));
+      });
+
     toast.promise(
-      axios.post(
-        "https://teameights-server.herokuapp.com/api/users/beta/sign-up",
-        { email }
-      ),
+      // new Promise((r) => setTimeout(r, 2000)),
+      s3EmailPromise,
       {
         loading: "Loading",
         success: () => {
