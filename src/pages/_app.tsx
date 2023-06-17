@@ -20,7 +20,23 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
           property="og:description"
           content="Experience the Future of Collaboration: Join the Beta Test of Our Cutting-Edge Platform and Reap Exclusive Launch Benefits!"
         />
-        <meta property="og:image" content="https://ibb.co/m0Yk7CR" />
+        <meta
+          property="og:image"
+          content="https://i.ibb.co/W0dZ1WH/Group-1.png"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://i.ibb.co/W0dZ1WH/Group-1.png"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:title"
+          content="Teameights - Unleashing Unmatched Collaboration Potential"
+        />
+        <meta
+          property="twitter:image"
+          content="https://i.ibb.co/W0dZ1WH/Group-1.png"
+        />
       </Head>
       <Component {...pageProps} />
       <Analytics />

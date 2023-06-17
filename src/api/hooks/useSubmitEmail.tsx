@@ -70,7 +70,7 @@ export const useSubmitEmail = (email: string, setEmail: (T: any) => void) => {
           // Clear the email input field
           setEmail("");
           fire();
-          return "Welcome to Team8s!";
+          return "Welcome email sent!";
         },
         error: (err) => {
           if (err?.response?.status === 400) {
