@@ -5,7 +5,7 @@ export const contactData = [
   {
     icon: <Email />,
     name: "Email",
-    href: "mailto:help@teameights.com",
+    href: "mailto:business@teameights.com",
   },
   {
     icon: <Telegram />,

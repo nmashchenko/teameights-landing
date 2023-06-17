@@ -22,6 +22,7 @@ export const CountdownBox = styled.div`
 
   display: flex;
   flex-direction: column;
+  gap: 16px;
   align-items: center;
   padding: 32px 0;
 
@@ -39,7 +40,7 @@ export const CountdownBox = styled.div`
 
   @media screen and (max-width: 468px) {
     max-width: 328px;
-    padding: 15px 0;
+    /* padding: 15px 0; */
   }
 `;
 

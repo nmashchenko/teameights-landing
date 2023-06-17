@@ -13,23 +13,23 @@ const Timer = ({
   seconds: string;
 }) => {
   return (
-    <FlexWrapper alignItems="baseline">
-      <FlexWrapper flexDirection="column" gap="10px">
+    <FlexWrapper alignItems="baseline" marginTop="0">
+      <FlexWrapper flexDirection="column" gap="10px" marginTop="0">
         <TimerText>{zeroPad(days)}</TimerText>
         <LabelText>days</LabelText>
       </FlexWrapper>
       <TimerText>:</TimerText>
-      <FlexWrapper flexDirection="column" gap="10px">
+      <FlexWrapper flexDirection="column" gap="10px" marginTop="0">
         <TimerText>{zeroPad(hours)}</TimerText>
         <LabelText>hours</LabelText>
       </FlexWrapper>
       <TimerText>:</TimerText>
-      <FlexWrapper flexDirection="column" gap="10px">
+      <FlexWrapper flexDirection="column" gap="10px" marginTop="0">
         <TimerText>{zeroPad(minutes)}</TimerText>
         <LabelText>minutes</LabelText>
       </FlexWrapper>
       <TimerText>:</TimerText>
-      <FlexWrapper flexDirection="column" gap="10px">
+      <FlexWrapper flexDirection="column" gap="10px" marginTop="0">
         <TimerText>{zeroPad(seconds)}</TimerText>
         <LabelText>seconds</LabelText>
       </FlexWrapper>

@@ -16,7 +16,13 @@ const ContactLink = ({
   height?: string;
 }) => {
   return (
-    <Link color={color} background={background} href={href}>
+    <Link
+      color={color}
+      background={background}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {icon}
       {text}
     </Link>
