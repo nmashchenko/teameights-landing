@@ -4,6 +4,7 @@ import styled, { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   // this is the shared style
   html {
+    background: ${colors.BLACK_BRIGHT};
     font-family: Rubik;
     box-sizing: border-box;
     /* Hide scrollbar for Chrome, Safari and Opera */
