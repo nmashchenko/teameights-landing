@@ -1,9 +1,8 @@
 import { colors } from "@/constants/colors";
 import styled from "styled-components";
 
-export const SideNavWrapper = styled.div<{ open: boolean; height: number }>`
-  height: ${(props) => `${props.height}px`};
-  min-height: 100vh;
+export const SideNavWrapper = styled.div<{ open: boolean }>`
+  height: 100dvh;
   width: ${(props) => (props.open ? "100%" : 0)};
   position: fixed;
   z-index: 9999;
@@ -17,6 +16,8 @@ export const SideNavWrapper = styled.div<{ open: boolean; height: number }>`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+  animation-timing-function: linear;
 `;
 
 export const LinkText = styled.h1<{ open: boolean }>`
@@ -26,6 +27,8 @@ export const LinkText = styled.h1<{ open: boolean }>`
   color: ${colors.WHITE};
   cursor: pointer;
   opacity: ${(props) => (props.open ? 1 : 0)};
+  transition: opacity 0.5s ease-in;
+  visibility: ${(props) => (props.open ? "visible" : "hidden")};
 
   :hover {
     color: ${colors.GREEN_BRIGHT};

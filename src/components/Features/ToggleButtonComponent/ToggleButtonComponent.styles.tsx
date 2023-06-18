@@ -37,6 +37,11 @@ export const ToggleButton = styled.button<{
   position: relative;
   overflow: hidden;
 
+  &:hover {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -66,15 +71,5 @@ export const ToggleButton = styled.button<{
 
   @media screen and (max-width: 568px) {
     width: 100%;
-  }
-
-  @media screen and (max-width: 468px) {
-    &:before {
-      background-color: transparent;
-    }
-
-    &:hover:before {
-      background-color: transparent;
-    }
   }
 `;

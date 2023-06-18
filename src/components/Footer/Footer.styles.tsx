@@ -8,15 +8,16 @@ export const FooterWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 50px 0 50px;
-  margin-top: 12.8%;
+  margin-top: 160px;
 
   @media screen and (max-width: 1024px) {
     padding: 0 25px 0 25px;
+    margin-top: 80px;
   }
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    margin-bottom: 5%;
+    margin-bottom: 32px;
   }
 `;
 

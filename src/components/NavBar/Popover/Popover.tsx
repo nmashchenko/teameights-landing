@@ -4,6 +4,7 @@ import { IPopover } from "./Popover.interface";
 import { colors } from "@/constants/colors";
 
 export default function Hover({
+  id,
   open,
   handlePopoverClose,
   anchorEl,
@@ -11,9 +12,8 @@ export default function Hover({
   return (
     <div>
       <Popover
-        id="mouse-over-popover"
+        id={id}
         sx={{
-          pointerEvents: "none",
           marginTop: "17px",
           borderRadius: "5px",
           "& .MuiPopover-paper": {
@@ -32,7 +32,6 @@ export default function Hover({
           horizontal: "center",
         }}
         onClose={handlePopoverClose}
-        disableRestoreFocus
       >
         <Typography sx={{ padding: "8px 12px" }}>
           If you have any issues, please email

@@ -29,6 +29,11 @@ export const Link = styled.a<{
   position: relative;
   overflow: hidden;
 
+  &:hover {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
   &:before {
     content: "";
     position: absolute;

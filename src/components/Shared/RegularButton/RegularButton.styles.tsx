@@ -33,7 +33,6 @@ export const Button = styled.button<{
   &:hover {
     transform: scale(1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    //outline: 1px solid rgba(255, 255, 255, 0.35); <-- kolhoz
   }
 
   &:before {

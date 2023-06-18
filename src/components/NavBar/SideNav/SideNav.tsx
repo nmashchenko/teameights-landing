@@ -11,7 +11,6 @@ import { sections } from "@/constants/sections";
 import { links } from "@/constants/links";
 import LinkButton from "@/components/Shared/LinkButton/LinkButton";
 import { Link } from "react-scroll";
-import { useGetHeight } from "@/hooks/useGetHeight";
 
 const SideNav = ({
   open,
@@ -20,9 +19,8 @@ const SideNav = ({
   open: boolean;
   setOpen: (T: boolean) => void;
 }) => {
-  const height = useGetHeight();
   return (
-    <SideNavWrapper open={open} height={height}>
+    <SideNavWrapper open={open}>
       <CloseBtn onClick={() => setOpen(false)} open={open}>
         <Close />
       </CloseBtn>
@@ -30,7 +28,7 @@ const SideNav = ({
         <Link
           to={section.name}
           smooth={true}
-          duration={800}
+          duration={1200}
           key={index}
           offset={-80}
           onClick={() => setOpen(false)}

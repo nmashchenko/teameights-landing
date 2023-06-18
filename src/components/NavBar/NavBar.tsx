@@ -1,4 +1,4 @@
-import React, { useState, MouseEvent } from "react";
+import React, { useState } from "react";
 import { Link, animateScroll } from "react-scroll";
 import { links } from "@/constants/links";
 import {
@@ -25,15 +25,16 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const navbarStyle = useHandleScroll();
 
-  const [anchorEl, setAnchorEl] = React.useState<HTMLDivElement | null>(null);
+  const [anchorEl, setAnchorEl] = useState<HTMLDivElement | null>(null);
 
   const openPopover = Boolean(anchorEl);
+  const id = openPopover ? "simple-popover" : undefined;
 
-  const handlePopoverOpen = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handlePopoverClose = () => {
+  const handleClose = () => {
     setAnchorEl(null);
   };
   return (
@@ -53,33 +54,31 @@ const NavBar = () => {
 
       {/* Desktop width >= 1024 */}
       <DesktopIconsWrapper>
+        {/* This is poppover that is displayed when we click on "Help" */}
+        <Hover
+          anchorEl={anchorEl}
+          handlePopoverClose={handleClose}
+          open={openPopover}
+          id={id}
+        />
         <SectionWrapper gap="24px">
           {sections.map((section, index) => (
-            <Link
-              to={section.name}
-              smooth={true}
-              duration={400}
-              key={index}
-              offset={-80}
-            >
+            <div key={index}>
               {section.name === "Help" ? (
-                <div
-                  onMouseEnter={(event: MouseEvent<HTMLDivElement>) =>
-                    handlePopoverOpen(event)
-                  }
-                  onMouseLeave={handlePopoverClose}
-                >
+                <div onClick={handleClick} aria-describedby={id}>
                   <SectionButton text={section.name} />
-                  <Hover
-                    anchorEl={anchorEl}
-                    handlePopoverClose={handlePopoverClose}
-                    open={openPopover}
-                  />
                 </div>
               ) : (
-                <SectionButton text={section.name} />
+                <Link
+                  to={section.name}
+                  smooth={true}
+                  duration={1200}
+                  offset={-80}
+                >
+                  <SectionButton text={section.name} />
+                </Link>
               )}
-            </Link>
+            </div>
           ))}
         </SectionWrapper>
         <LinkButtonsWrapper>
