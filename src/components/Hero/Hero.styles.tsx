@@ -1,4 +1,5 @@
 import { colors } from "@/constants/colors";
+import { TypeAnimation } from "react-type-animation";
 import styled from "styled-components";
 
 export const HeroWrapper = styled.div`
@@ -33,7 +34,8 @@ export const GradientTextWrapper = styled.div`
   margin-bottom: 24px;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    max-width: 450px;
+    max-width: 410px;
+    min-height: 213px;
   }
 
   @media screen and (max-width: 767px) {
@@ -102,3 +104,13 @@ export const canvasStyles: React.CSSProperties = {
   top: 0,
   left: 0,
 };
+
+export const AutoTyping = styled(TypeAnimation)`
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: inherit;
+  }
+`;
