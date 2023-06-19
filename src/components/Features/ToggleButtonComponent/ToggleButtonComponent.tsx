@@ -24,7 +24,7 @@ const ToggleButtonComponent = ({
           onClick={() => setActive(feature.name)}
         >
           {feature.icon}
-          {screenWidth > 568 && feature.name}
+          {screenWidth > 767 && feature.name}
         </ToggleButton>
       ))}
     </ToggleButtonsContainer>

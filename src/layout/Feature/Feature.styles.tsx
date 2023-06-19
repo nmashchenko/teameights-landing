@@ -25,14 +25,10 @@ export const FeatureLayoutContainer = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    max-width: 776px;
+    max-width: 720px;
   }
 
-  @media screen and (max-width: 768px) {
-    max-width: 558px;
-  }
-
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 767px) {
     max-width: 328px;
   }
 `;
@@ -41,7 +37,11 @@ export const CardsContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     gap: 30px;
   }
@@ -69,7 +69,7 @@ export const Card = styled.div`
     max-width: 376px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     max-width: 558px;
   }
 `;

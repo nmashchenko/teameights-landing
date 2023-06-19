@@ -19,13 +19,8 @@ export const MemberImage = styled(Image)`
   height: 110px;
   object-fit: contain;
 
-  @media screen and (max-width: 568px) {
-    width: 350px;
-    height: 80px;
-  }
-
-  @media screen and (max-width: 468px) {
-    width: 350px;
+  @media screen and (max-width: 767px) {
+    width: 328px;
     height: 80px;
   }
 `;

@@ -7,9 +7,15 @@ export const CountdownWrapper = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 160px;
-
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (max-width: 1024px) {
     margin-top: 80px;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 80px;
+    max-width: 328px;
   }
 `;
 

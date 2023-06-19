@@ -14,14 +14,13 @@ export const Input = styled.input<{ clicked: boolean }>`
   font-size: 20px;
   font-weight: 400;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
     width: 340px;
   }
 
-  @media screen and (max-width: 468px) {
-    max-width: 318px;
+  @media screen and (max-width: 767px) {
+    max-width: 328px;
   }
-
   :focus {
     outline: 0 !important;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;

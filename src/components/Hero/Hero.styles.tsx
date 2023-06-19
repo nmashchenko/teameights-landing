@@ -8,7 +8,11 @@ export const HeroWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100dvh - 80px);
+  margin: auto;
+  @media screen and (max-width: 767px) {
+    max-width: 328px;
+  }
 `;
 
 export const RowWrapper = styled.div`
@@ -18,7 +22,7 @@ export const RowWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     gap: 25px;
   }
@@ -28,11 +32,11 @@ export const GradientTextWrapper = styled.div`
   width: 100%;
   max-width: 1100px;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
     max-width: 450px;
   }
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 767px) {
     max-width: 318px;
     min-height: 138px;
 
@@ -80,11 +84,11 @@ export const PlatformText = styled.h1`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     font-size: 60px;
   }
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 767px) {
     font-size: 40px;
   }
 `;

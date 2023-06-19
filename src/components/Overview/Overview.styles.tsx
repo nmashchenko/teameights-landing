@@ -4,10 +4,18 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 0 15px 0 15px;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 export const Card = styled.div`

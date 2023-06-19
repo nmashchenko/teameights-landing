@@ -53,11 +53,7 @@ export const Button = styled.button<{
     transform: translate(-50%, -50%) scale(1);
   }
 
-  @media screen and (max-width: 768px) {
-    width: 340px;
-  }
-
-  @media screen and (max-width: 468px) {
-    max-width: 318px;
+  @media screen and (max-width: 767px) {
+    width: 328px;
   }
 `;
