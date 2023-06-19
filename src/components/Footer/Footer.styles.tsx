@@ -15,9 +15,10 @@ export const FooterWrapper = styled.div`
     margin-top: 80px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     margin-bottom: 32px;
+    justify-content: space-around;
   }
 `;
 
@@ -25,7 +26,7 @@ export const LinkButtonsWrapper = styled.div`
   display: flex;
   gap: 16px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 `;

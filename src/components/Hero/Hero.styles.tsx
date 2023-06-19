@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  /* gap: 24px; */
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -18,19 +18,20 @@ export const HeroWrapper = styled.div`
 export const RowWrapper = styled.div`
   display: flex;
   gap: 16px;
-  margin-top: 22px;
+  /* margin-top: 22px; */
   justify-content: center;
   align-items: center;
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
-    gap: 25px;
+    /* gap: 25px; */
   }
 `;
 
 export const GradientTextWrapper = styled.div`
   width: 100%;
   max-width: 1100px;
+  margin-bottom: 24px;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     max-width: 450px;
@@ -50,6 +51,7 @@ export const RegularTextWrapper = styled.div`
   width: 100%;
   max-width: 710px;
   text-align: center;
+  margin-bottom: 36px;
 
   @media screen and (max-width: 1024px) {
     max-width: 510px;

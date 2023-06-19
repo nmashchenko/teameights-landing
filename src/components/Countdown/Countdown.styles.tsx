@@ -28,7 +28,7 @@ export const CountdownBox = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  /* gap: 16px; */
   align-items: center;
   padding: 32px 0;
 

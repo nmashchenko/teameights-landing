@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const ToggleButtonsContainer = styled.div`
   display: flex;
   gap: 16px;
-  margin-top: 20px;
 
   @media screen and (max-width: 767px) {
     max-width: 328px;

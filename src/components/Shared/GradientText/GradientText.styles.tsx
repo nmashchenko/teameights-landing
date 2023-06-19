@@ -43,7 +43,8 @@ export const LargeText = styled.h1`
   font-size: 48px;
 
   text-align: center;
-  margin: 0;
+  margin-bottom: 16px;
+  margin-top: 0;
 
   background: linear-gradient(
     0deg,

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SectionWrapper = styled.div<{ marginTop?: string }>`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  /* gap: 24px; */
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -22,7 +22,7 @@ export const SectionWrapper = styled.div<{ marginTop?: string }>`
 export const RegularTextWrapper = styled.div`
   width: 100%;
   max-width: 710px;
-
+  margin-bottom: 36px;
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     max-width: 510px;
   }
