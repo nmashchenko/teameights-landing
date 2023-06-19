@@ -10,8 +10,8 @@ const _fadeIn = keyframes`
 export const FeatureLayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 36px;
-  margin-top: 4.8%;
+  gap: 24px;
+  margin-top: 24px;
   max-width: 1170px;
 
   animation: ${_fadeIn} 0.3s ease-in;
@@ -25,14 +25,10 @@ export const FeatureLayoutContainer = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    max-width: 776px;
+    max-width: 720px;
   }
 
-  @media screen and (max-width: 768px) {
-    max-width: 558px;
-  }
-
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 767px) {
     max-width: 328px;
   }
 `;
@@ -40,10 +36,10 @@ export const FeatureLayoutContainer = styled.div`
 export const CardsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
-    gap: 30px;
   }
 `;
 
@@ -69,7 +65,7 @@ export const Card = styled.div`
     max-width: 376px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     max-width: 558px;
   }
 `;

@@ -1,38 +1,44 @@
 import { colors } from "@/constants/colors";
+import { TypeAnimation } from "react-type-animation";
 import styled from "styled-components";
 
 export const HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100dvh - 80px);
+  margin: auto;
+  @media screen and (max-width: 767px) {
+    max-width: 328px;
+  }
 `;
 
 export const RowWrapper = styled.div`
   display: flex;
   gap: 16px;
-  margin-top: 22px;
+
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
-    gap: 25px;
   }
 `;
 
 export const GradientTextWrapper = styled.div`
   width: 100%;
   max-width: 1100px;
+  margin-bottom: 24px;
 
-  @media screen and (max-width: 1024px) {
-    max-width: 450px;
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    max-width: 410px;
+    min-height: 213px;
   }
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 767px) {
     max-width: 318px;
     min-height: 138px;
 
@@ -46,6 +52,7 @@ export const RegularTextWrapper = styled.div`
   width: 100%;
   max-width: 710px;
   text-align: center;
+  margin-bottom: 36px;
 
   @media screen and (max-width: 1024px) {
     max-width: 510px;
@@ -80,11 +87,11 @@ export const PlatformText = styled.h1`
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     font-size: 60px;
   }
 
-  @media screen and (max-width: 468px) {
+  @media screen and (max-width: 767px) {
     font-size: 40px;
   }
 `;
@@ -97,3 +104,13 @@ export const canvasStyles: React.CSSProperties = {
   top: 0,
   left: 0,
 };
+
+export const AutoTyping = styled(TypeAnimation)`
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: inherit;
+  }
+`;

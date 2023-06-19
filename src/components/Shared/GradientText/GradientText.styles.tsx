@@ -31,8 +31,6 @@ export const MediumText = styled.h1`
   -webkit-text-fill-color: transparent;
   background-clip: text;
 
-  /* neon text */
-  //text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
   @media screen and (max-width: 468px) {
     text-align: left;
   }
@@ -43,7 +41,8 @@ export const LargeText = styled.h1`
   font-size: 48px;
 
   text-align: center;
-  margin: 0;
+  margin-bottom: 16px;
+  margin-top: 0;
 
   background: linear-gradient(
     0deg,
@@ -55,8 +54,6 @@ export const LargeText = styled.h1`
   background-clip: text;
   background-size: 300%;
   user-select: none;
-  /* neon text */
-  //text-shadow: 0px 0px 16px rgba(91, 212, 36, 0.25);
 
   @media screen and (max-width: 1024px) {
     font-size: 38px;

@@ -4,9 +4,8 @@ import styled from "styled-components";
 export const ToggleButtonsContainer = styled.div`
   display: flex;
   gap: 16px;
-  margin-top: 20px;
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 767px) {
     max-width: 328px;
     width: 100%;
   }
@@ -69,7 +68,7 @@ export const ToggleButton = styled.button<{
     }
   }
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 767px) {
     width: 100%;
   }
 `;

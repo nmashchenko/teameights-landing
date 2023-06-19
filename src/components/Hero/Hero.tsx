@@ -3,6 +3,7 @@ import RegularInput from "../Shared/RegularInput/RegularInput";
 import HeaderText from "../Shared/HeaderText/HeaderText";
 
 import {
+  AutoTyping,
   GradientTextWrapper,
   HeroWrapper,
   PlatformText,
@@ -10,7 +11,6 @@ import {
   RowWrapper,
   canvasStyles,
 } from "./Hero.styles";
-import { TypeAnimation } from "react-type-animation";
 import { useState } from "react";
 import { useSubmitEmail } from "@/api/hooks/useSubmitEmail";
 import ReactCanvasConfetti from "react-canvas-confetti";
@@ -25,7 +25,7 @@ const Hero = () => {
       <GradientTextWrapper>
         <PlatformText>
           Collaboration Platform For{" "}
-          <TypeAnimation
+          <AutoTyping
             sequence={[
               "Developers",
               2000,

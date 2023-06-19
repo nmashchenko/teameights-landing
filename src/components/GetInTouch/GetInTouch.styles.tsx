@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const RegularTextWrapper = styled.div`
   width: 100%;
   max-width: 710px;
+  margin-bottom: 36px;
 
   @media screen and (max-width: 1024px) {
     max-width: 510px;
@@ -19,18 +20,15 @@ export const MemberImage = styled(Image)`
   height: 110px;
   object-fit: contain;
 
-  @media screen and (max-width: 568px) {
-    width: 350px;
-    height: 80px;
-  }
-
-  @media screen and (max-width: 468px) {
-    width: 350px;
+  @media screen and (max-width: 767px) {
+    width: 328px;
     height: 80px;
   }
 `;
 
-export const ImagesWrapper = styled.div``;
+export const ImagesWrapper = styled.div`
+  margin-bottom: 36px;
+`;
 
 export const ButtonsWrapper = styled.div`
   display: flex;
