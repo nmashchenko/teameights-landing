@@ -30,6 +30,10 @@ export const Card = styled.div`
   border: 2px solid ${colors.GREY_BORDER};
   border-radius: 10px;
   align-items: flex-start;
+
+  @media screen and (max-width: 767px) {
+    width: 328px;
+  }
 `;
 
 export const InfoContainer = styled.div`
