@@ -4,8 +4,8 @@ import { colors } from "@/constants/colors";
 export const Button = styled.button<{ dimensions: string }>`
   width: ${(props) => props.dimensions || "32px"};
   height: ${(props) => props.dimensions || "32px"};
-  min-height: 32px; /* Add this line */
-  appearance: none; /* Add this line */
+  min-height: 32px;
+  appearance: none;
   background: ${colors.WHITE};
   outline: none;
   border: none;

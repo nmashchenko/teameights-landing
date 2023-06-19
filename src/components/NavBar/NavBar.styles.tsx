@@ -36,7 +36,7 @@ export const DesktopLogoWrapper = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  /* padding-bottom: 5px; */
+
   display: flex;
   gap: 8px;
 

@@ -38,9 +38,6 @@ export const CardsContainer = styled.div`
   justify-content: space-between;
   gap: 24px;
 
-  @media screen and (max-width: 1024px) {
-  }
-
   @media screen and (max-width: 767px) {
     flex-direction: column;
   }

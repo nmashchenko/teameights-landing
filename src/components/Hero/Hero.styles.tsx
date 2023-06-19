@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const HeroWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* gap: 24px; */
+
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -18,13 +18,12 @@ export const HeroWrapper = styled.div`
 export const RowWrapper = styled.div`
   display: flex;
   gap: 16px;
-  /* margin-top: 22px; */
+
   justify-content: center;
   align-items: center;
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
-    /* gap: 25px; */
   }
 `;
 
