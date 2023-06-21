@@ -22,11 +22,11 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         />
         <meta
           property="og:image"
-          content="https://i.ibb.co/W0dZ1WH/Group-1.png"
+          content="https://i.ibb.co/y8MRSbY/Logo-T8-S-image.png"
         />
         <meta
           property="og:image:secure_url"
-          content="https://i.ibb.co/W0dZ1WH/Group-1.png"
+          content="https://i.ibb.co/y8MRSbY/Logo-T8-S-image.png"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta
@@ -35,7 +35,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         />
         <meta
           property="twitter:image"
-          content="https://i.ibb.co/W0dZ1WH/Group-1.png"
+          content="https://i.ibb.co/y8MRSbY/Logo-T8-S-image.png"
         />
       </Head>
       <Component {...pageProps} />
