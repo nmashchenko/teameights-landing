@@ -13,7 +13,7 @@ const SectionLayout = ({
 }: {
   headerText: string;
   description?: string;
-  children: any;
+  children?: React.ReactNode;
   name: string;
   marginTop?: string;
   withDescription?: boolean;

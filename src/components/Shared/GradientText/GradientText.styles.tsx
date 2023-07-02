@@ -17,8 +17,8 @@ export const SmallText = styled.h1`
 
 export const MediumText = styled.h1`
   font-weight: 600;
-  font-size: 32px;
-
+  font-size: 24px;
+  user-select: none;
   text-align: center;
   margin: 0;
 
@@ -30,6 +30,10 @@ export const MediumText = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
 
   @media screen and (max-width: 468px) {
     text-align: left;
@@ -57,5 +61,9 @@ export const LargeText = styled.h1`
 
   @media screen and (max-width: 1024px) {
     font-size: 38px;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 32px;
   }
 `;

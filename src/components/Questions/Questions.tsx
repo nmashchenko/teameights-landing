@@ -1,6 +1,6 @@
 import CustomizedAccordions from "../Accordion/Accordion";
 import SectionLayout from "@/layout/Section/Section";
-
+import { questions } from "@/constants/questions";
 const Questions = () => {
   return (
     <SectionLayout
@@ -8,7 +8,7 @@ const Questions = () => {
       headerText="Frequently asked questions"
       withDescription={false}
     >
-      <CustomizedAccordions />
+      <CustomizedAccordions accordionData={questions} />
     </SectionLayout>
   );
 };
