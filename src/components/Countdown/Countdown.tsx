@@ -19,7 +19,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
 
 const CountdownComponent = () => {
   const countdownDuration = moment
-    .tz("2023-07-10 00:00:00", "America/Chicago")
+    .tz("2023-07-12 00:00:00", "America/Chicago")
     .diff(moment());
 
   return (
