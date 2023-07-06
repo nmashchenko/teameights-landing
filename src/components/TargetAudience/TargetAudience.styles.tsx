@@ -8,13 +8,13 @@ export const TargetAudienceSection = styled.div`
   align-items: center;
   width: 100%;
 
-  margin-top: 6.25rem;
+  margin-top: 7.625rem;
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 768px) {
     max-width: 328px;
-    margin-top: 2.5rem;
+    margin-top: 6.25rem;
     margin-left: auto;
     margin-right: auto;
   }

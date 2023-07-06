@@ -16,16 +16,24 @@ export const AccordionWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (min-width: 1920px) {
+    max-width: 1170px;
+  }
+
+  @media screen and (min-width: 1281px) and (max-width: 1919px) {
     max-width: 970px;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
     max-width: 776px;
   }
 
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    max-width: 526px;
+  }
+
   @media screen and (max-width: 768px) {
-    max-width: 720px;
+    max-width: 526px;
   }
 
   @media screen and (max-width: 468px) {

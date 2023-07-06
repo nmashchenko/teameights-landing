@@ -5,6 +5,7 @@ import { Container } from "../layout/Basic";
 import AboutPlatform from "@/components/AboutPlatform/AboutPlatform";
 import TargetAudience from "@/components/TargetAudience/TargetAudience";
 import Benefits from "@/components/Benefits/Benefits";
+import Waiting from "@/components/Waiting/Waiting";
 
 const Info = () => {
   return (
@@ -14,6 +15,7 @@ const Info = () => {
         <AboutPlatform />
         <TargetAudience />
         <Benefits />
+        <Waiting />
         <Footer />
       </Container>
     </BasicLayout>

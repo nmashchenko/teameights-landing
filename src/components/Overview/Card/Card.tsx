@@ -7,6 +7,7 @@ import {
 import Image from "next/image";
 import ArrowRight from "@/assets/Arrows/ArrowRight";
 import GradientText from "@/components/Shared/GradientText/GradientText";
+import Link from "next/link";
 
 const OverviewCard = ({ element }: { element: any }) => {
   return (
@@ -17,10 +18,12 @@ const OverviewCard = ({ element }: { element: any }) => {
         <Description>{element.description}</Description>
       </InfoContainer>
       <div>
-        <LearnButton>
-          Learn more
-          <ArrowRight />
-        </LearnButton>
+        <Link href="/info" style={{ textDecoration: "none" }}>
+          <LearnButton>
+            Learn more
+            <ArrowRight />
+          </LearnButton>
+        </Link>
       </div>
     </Card>
   );
