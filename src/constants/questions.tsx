@@ -1,4 +1,6 @@
-export const questions = [
+import { AccordionData } from "@/components/Shared/Interfaces/accordionData.interface";
+
+export const questions: AccordionData[] = [
   {
     questionName: "q1",
     summary: "What is your platform about?",

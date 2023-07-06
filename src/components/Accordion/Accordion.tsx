@@ -7,9 +7,13 @@ import {
   Description,
   SummaryText,
 } from "./Accordion.styles";
-import { questions } from "@/constants/questions";
+import { AccordionData } from "../Shared/Interfaces/accordionData.interface";
 
-export default function CustomizedAccordions() {
+export default function CustomizedAccordions({
+  accordionData,
+}: {
+  accordionData: AccordionData[];
+}) {
   const [expanded, setExpanded] = useState<string | false>("");
 
   const handleChange =
@@ -19,7 +23,7 @@ export default function CustomizedAccordions() {
 
   return (
     <AccordionWrapper>
-      {questions.map((question, index) => (
+      {accordionData.map((question, index) => (
         <div key={index}>
           <Accordion
             expanded={expanded === question.questionName}

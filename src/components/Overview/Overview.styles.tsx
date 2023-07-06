@@ -53,6 +53,7 @@ export const Description = styled.h1`
 
 export const LearnButton = styled.button`
   border: none;
+
   outline: none;
   background: none;
   cursor: pointer;
