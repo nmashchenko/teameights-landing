@@ -6,11 +6,13 @@ import AboutPlatform from "@/components/AboutPlatform/AboutPlatform";
 import TargetAudience from "@/components/TargetAudience/TargetAudience";
 import Benefits from "@/components/Benefits/Benefits";
 import Waiting from "@/components/Waiting/Waiting";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 
 const Info = () => {
   return (
     <BasicLayout>
-      <NavBar />
+      <NavBar shouldScroll={false} />
+      <ScrollToTop />
       <Container>
         <AboutPlatform />
         <TargetAudience />

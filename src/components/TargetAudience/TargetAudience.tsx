@@ -12,7 +12,10 @@ const TargetAudience = () => {
       <RegularTextWrapper>
         <HeaderText text="Our platform caters to a diverse target audience in the tech and development industry, fostering a vibrant community where individuals can network, collaborate, and embark on remarkable projects together." />
       </RegularTextWrapper>
-      <CustomizedAccordions accordionData={info}></CustomizedAccordions>
+      <CustomizedAccordions
+        accordionData={info}
+        withIcon={true}
+      ></CustomizedAccordions>
     </TargetAudienceSection>
   );
 };

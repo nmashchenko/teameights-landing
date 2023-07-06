@@ -8,7 +8,7 @@ const Questions = () => {
       headerText="Frequently asked questions"
       withDescription={false}
     >
-      <CustomizedAccordions accordionData={questions} />
+      <CustomizedAccordions accordionData={questions} withIcon={false} />
     </SectionLayout>
   );
 };
