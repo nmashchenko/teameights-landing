@@ -50,14 +50,14 @@ const AboutPlatform = () => {
               <MentorshipImage
                 src={Mentorship}
                 alt="Mentorship"
-                loading="eager"
+                loading="lazy"
               />
             </ImageContainer>
           </LeftColumnContainer>
 
           <RightColumnContainer>
             <ImageContainer>
-              <TeamImage src={TeamCollaboration} alt="Team" loading="eager" />
+              <TeamImage src={TeamCollaboration} alt="Team" loading="lazy" />
             </ImageContainer>
             <CardContainer>
               <InfoContainer>
@@ -88,7 +88,7 @@ const AboutPlatform = () => {
             <ProjectsImage
               src={Projects}
               alt="Projects"
-              loading="eager"
+              loading="lazy"
             ></ProjectsImage>
           </ImageContainer>
         </DoubleCardContainer>
@@ -98,7 +98,7 @@ const AboutPlatform = () => {
             <HackathonsImage
               src={Hackathons}
               alt="Hackathons"
-              loading="eager"
+              loading="lazy"
             ></HackathonsImage>
           </ImageContainer>
           <CardContainer>
@@ -128,7 +128,7 @@ const AboutPlatform = () => {
             <CodingImage
               src={CodingBattles}
               alt="Coding Battles"
-              loading="eager"
+              loading="lazy"
             ></CodingImage>
           </ImageContainer>
         </DoubleCardContainer>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, animateScroll } from "react-scroll";
 import { links } from "@/constants/links";
+import { useRouter } from "next/router";
 import {
   DesktopIconsWrapper,
   DesktopLogoWrapper,
@@ -21,9 +22,10 @@ import Ukraine from "@/assets/Flags/Ukraine";
 import { useHandleScroll } from "@/hooks/useHandleScroll";
 import Hover from "./Popover/Popover";
 
-const NavBar = () => {
+const NavBar = ({ shouldScroll = true }: { shouldScroll: boolean }) => {
   const [open, setOpen] = useState(false);
-  const navbarStyle = useHandleScroll();
+  const navbarStyle = useHandleScroll({ isTargetIcon: false });
+  const router = useRouter();
 
   const [anchorEl, setAnchorEl] = useState<HTMLDivElement | null>(null);
 
@@ -41,13 +43,21 @@ const NavBar = () => {
     <NavBarWrapper style={navbarStyle}>
       <SideNav open={open} setOpen={setOpen} />
       {/* Desktop width >= 1024 */}
-      <DesktopLogoWrapper onClick={() => animateScroll.scrollToTop()}>
+      <DesktopLogoWrapper
+        onClick={() =>
+          shouldScroll ? animateScroll.scrollToTop() : router.push("/")
+        }
+      >
         <Logo />
         <Ukraine />
       </DesktopLogoWrapper>
 
       {/* Desktop width < 1024 */}
-      <MobileLogoWrapper onClick={() => animateScroll.scrollToTop()}>
+      <MobileLogoWrapper
+        onClick={() =>
+          shouldScroll ? animateScroll.scrollToTop() : router.push("/")
+        }
+      >
         <MobileLogo />
         <Ukraine />
       </MobileLogoWrapper>
