@@ -28,7 +28,7 @@ const Benefits = () => {
             <SupportingTextWrapper>
               You will have the exclusive opportunity to explore and utilize all
               cutting-edge features, functionalities, and tools of our platform
-              before it's officially launched to the public.{" "}
+              before it is officially launched to the public.{" "}
             </SupportingTextWrapper>
           </BenefitsText>
         </BenefitsItem>
