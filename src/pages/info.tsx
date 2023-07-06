@@ -16,6 +16,7 @@ const Info = () => {
         <TargetAudience />
         <Benefits />
         <Waiting />
+        <Waiting />
         <Footer />
       </Container>
     </BasicLayout>
