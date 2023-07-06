@@ -40,7 +40,10 @@ export default function CustomizedAccordions({
             >
               <AccordionImage>
                 {withIcon && (
-                  <Image src={question.icon} alt={question.questionName} />
+                  <Image
+                    src={question.icon || ""}
+                    alt={question.questionName}
+                  />
                 )}
                 <SummaryText>{question.summary}</SummaryText>
               </AccordionImage>

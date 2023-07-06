@@ -4,5 +4,5 @@ export interface AccordionData {
   questionName: string;
   summary: string;
   description: string;
-  icon: StaticImageData;
+  icon?: StaticImageData;
 }
