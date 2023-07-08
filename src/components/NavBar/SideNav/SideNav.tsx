@@ -5,6 +5,7 @@ import {
   LinkButtonsWrapper,
   LinkText,
   SideNavWrapper,
+  MobHelpLink,
 } from "./SideNav.styles";
 import Close from "@/assets/Icons/Close";
 import { sections } from "@/constants/sections";
@@ -38,6 +39,9 @@ const SideNav = ({
           </LinkText>
         </Link>
       ))}
+      <MobHelpLink href="mailto:help@teameights.com" open={open}>
+        Help
+      </MobHelpLink>
       <BottomWrapper open={open}>
         <LinkButtonsWrapper>
           {links.map((link) => (

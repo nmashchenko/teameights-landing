@@ -21,7 +21,7 @@ export const Button = styled.button<{
   background: ${(props) => props.background || colors.GREEN_NORMAL};
   border-radius: 10px;
   color: ${(props) => props.color || "white"};
-  font-size: 1.1rem;
+  font-size: 20px;
   font-weight: 400;
   border: none;
   outline: none;
@@ -55,5 +55,6 @@ export const Button = styled.button<{
 
   @media screen and (max-width: 767px) {
     width: 328px;
+    font-size: 16px;
   }
 `;

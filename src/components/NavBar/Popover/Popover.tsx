@@ -36,9 +36,12 @@ export default function Hover({
         <Typography sx={{ padding: "8px 12px" }}>
           If you have any issues, please email
           <br /> us at{" "}
-          <span style={{ color: colors.GREEN_BRIGHT }}>
+          <a
+            href="mailto:help@teameights.com"
+            style={{ color: colors.GREEN_BRIGHT }}
+          >
             help@teameights.com
-          </span>
+          </a>
         </Typography>
       </Popover>
     </div>

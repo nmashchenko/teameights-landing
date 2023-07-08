@@ -85,3 +85,22 @@ export const LinkButtonsWrapper = styled.div`
   display: flex;
   gap: 24px;
 `;
+
+export const MobHelpLink = styled.a<{ open: boolean }>`
+  font-family: Rubik;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: ${colors.WHITE};
+  text-decoration: none;
+  cursor: pointer;
+  opacity: ${(props) => (props.open ? 1 : 0)};
+  transition: opacity 0.5s ease-in;
+  visibility: ${(props) => (props.open ? "visible" : "hidden")};
+
+  :hover {
+    color: ${colors.GREEN_BRIGHT};
+  }
+`;

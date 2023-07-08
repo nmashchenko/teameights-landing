@@ -6,6 +6,7 @@ export const ScrollWrapper = styled.div<{ display: string }>`
   bottom: 36px;
   cursor: pointer;
   display: ${(props) => props.display || "none"};
+  z-index: 50;
 `;
 
 export const ScrollContainer = styled.div`
@@ -16,4 +17,6 @@ export const ScrollContainer = styled.div`
   align-items: center;
   border-radius: 10px;
   border: 2px solid #46a11b;
+  backdrop-filter: blur(5px);
+  background: transparent;
 `;
