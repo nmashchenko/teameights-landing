@@ -2,17 +2,21 @@ import { useState } from "react";
 import {
   Accordion,
   AccordionDetails,
+  AccordionImage,
   AccordionSummary,
   AccordionWrapper,
   Description,
   SummaryText,
 } from "./Accordion.styles";
 import { AccordionData } from "../Shared/Interfaces/accordionData.interface";
+import Image from "next/image";
 
 export default function CustomizedAccordions({
   accordionData,
+  withIcon = false,
 }: {
   accordionData: AccordionData[];
+  withIcon: boolean;
 }) {
   const [expanded, setExpanded] = useState<string | false>("");
 
@@ -34,7 +38,15 @@ export default function CustomizedAccordions({
               id="panel1d-header"
               expanded={(expanded === question.questionName).toString()}
             >
-              <SummaryText>{question.summary}</SummaryText>
+              <AccordionImage>
+                {withIcon && (
+                  <Image
+                    src={question.icon || ""}
+                    alt={question.questionName}
+                  />
+                )}
+                <SummaryText>{question.summary}</SummaryText>
+              </AccordionImage>
             </AccordionSummary>
             <AccordionDetails>
               <Description>{question.description}</Description>

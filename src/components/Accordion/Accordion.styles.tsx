@@ -93,3 +93,10 @@ export const AccordionSummary = muistyled(
 export const AccordionDetails = muistyled(MuiAccordionDetails)(() => ({
   padding: "0 0 10px 0",
 }));
+
+export const AccordionImage = styled.div`
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+`;

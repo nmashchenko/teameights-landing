@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <BasicLayout>
       <Toaster />
-      <NavBar />
+      <NavBar shouldScroll />
       <Container>
         <Hero />
         <Overview />
