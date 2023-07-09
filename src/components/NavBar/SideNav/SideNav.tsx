@@ -12,6 +12,7 @@ import { sections } from "@/constants/sections";
 import { links } from "@/constants/links";
 import LinkButton from "@/components/Shared/LinkButton/LinkButton";
 import { Link } from "react-scroll";
+import { emailAction } from "@/constants/mailAction";
 
 const SideNav = ({
   open,
@@ -39,7 +40,7 @@ const SideNav = ({
           </LinkText>
         </Link>
       ))}
-      <MobHelpLink href="mailto:help@teameights.com" open={open}>
+      <MobHelpLink href={emailAction.href} open={open}>
         Help
       </MobHelpLink>
       <BottomWrapper open={open}>

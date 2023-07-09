@@ -2,6 +2,7 @@ import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
 import { IPopover } from "./Popover.interface";
 import { colors } from "@/constants/colors";
+import { emailAction } from "@/constants/mailAction";
 
 export default function Hover({
   id,
@@ -37,8 +38,8 @@ export default function Hover({
           If you have any issues, please email
           <br /> us at{" "}
           <a
-            href="mailto:help@teameights.com"
-            style={{ color: colors.GREEN_BRIGHT }}
+            href={emailAction.href}
+            style={{ color: colors.GREEN_BRIGHT, textDecoration: "none" }}
           >
             help@teameights.com
           </a>
