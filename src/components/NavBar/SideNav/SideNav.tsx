@@ -5,12 +5,14 @@ import {
   LinkButtonsWrapper,
   LinkText,
   SideNavWrapper,
+  MobHelpLink,
 } from "./SideNav.styles";
 import Close from "@/assets/Icons/Close";
 import { sections } from "@/constants/sections";
 import { links } from "@/constants/links";
 import LinkButton from "@/components/Shared/LinkButton/LinkButton";
 import { Link } from "react-scroll";
+import { emailAction } from "@/constants/mailAction";
 
 const SideNav = ({
   open,
@@ -38,6 +40,9 @@ const SideNav = ({
           </LinkText>
         </Link>
       ))}
+      <MobHelpLink href={emailAction.href} open={open}>
+        Help
+      </MobHelpLink>
       <BottomWrapper open={open}>
         <LinkButtonsWrapper>
           {links.map((link) => (

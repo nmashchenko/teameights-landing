@@ -13,6 +13,7 @@ export const Input = styled.input<{ clicked: boolean }>`
   color: ${colors.WHITE};
   font-size: 20px;
   font-weight: 400;
+  font-family: Rubik;
 
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     width: 340px;
@@ -20,6 +21,7 @@ export const Input = styled.input<{ clicked: boolean }>`
 
   @media screen and (max-width: 767px) {
     max-width: 328px;
+    font-size: 16px;
   }
   :focus {
     outline: 0 !important;
