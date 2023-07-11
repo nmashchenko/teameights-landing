@@ -1,15 +1,9 @@
-import RegularButton from "../Shared/RegularButton/RegularButton";
-import RegularInput from "../Shared/RegularInput/RegularInput";
-import { RowWrapper, canvasStyles } from "./Waiting.styles";
-import { useState } from "react";
-import { useSubmitEmail } from "@/api/hooks/useSubmitEmail";
+import { colors } from "@/constants/colors";
+import ContactLink from "../Shared/ContactLink/ContactLink";
+import { RowWrapper } from "./Waiting.styles";
 import SectionLayout from "@/layout/Section/Section";
-import ReactCanvasConfetti from "react-canvas-confetti";
 
 const Waiting = () => {
-  const [email, setEmail] = useState("");
-
-  const { handleSubmit, getInstance } = useSubmitEmail(email, setEmail);
 
   return (
     <SectionLayout
@@ -19,13 +13,7 @@ const Waiting = () => {
       withDescription={true}
     >
       <RowWrapper>
-        <RegularInput
-          placeholder="Enter your email"
-          data={email}
-          setData={setEmail}
-        />
-        <RegularButton text="Join Beta" handleClick={handleSubmit} />
-        <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
+        <ContactLink href="https://app.teameights.com"  width="100%" text="Join Beta" background={colors.GREEN_NORMAL} />
       </RowWrapper>
     </SectionLayout>
   );

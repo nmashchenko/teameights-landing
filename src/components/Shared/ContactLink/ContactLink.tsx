@@ -6,6 +6,8 @@ const ContactLink = ({
   color,
   background,
   href,
+  width,
+  height,
 }: {
   text: string;
   href: string;
@@ -20,6 +22,8 @@ const ContactLink = ({
       color={color}
       background={background}
       href={href}
+      width={width}
+      height={height}
       target="_blank"
       rel="noopener noreferrer"
     >

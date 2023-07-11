@@ -10,6 +10,7 @@ const LinkButton = ({
   icon: any;
   link?: string;
   dimensions?: string;
+  text?: string
 }) => {
   return (
     <Button

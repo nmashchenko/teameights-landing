@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const RowWrapper = styled.div`
   display: flex;
   gap: 16px;
+  width: 100%;
+  max-width: 357px;
 
   justify-content: center;
   align-items: center;

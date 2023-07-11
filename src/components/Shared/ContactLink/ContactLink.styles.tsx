@@ -4,20 +4,22 @@ import styled from "styled-components";
 export const Link = styled.a<{
   color?: string;
   background?: string;
+  width?: string;
+  height?: string;
 }>`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.375rem;
 
-  width: 164px;
-  height: 48px;
+  width: ${(props) => props.width || "164px"};
+  height: ${(props) => props.height || "48px"};
 
   text-decoration: none;
 
   /* White Outline Secondary Button */
 
-  background-color: transparent;
+  background: ${(props) => props.background || 'transparent'};
   border-radius: 10px;
   color: ${(props) => props.color || "white"};
   font-size: 1.25rem;

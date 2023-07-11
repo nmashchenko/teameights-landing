@@ -1,5 +1,5 @@
-import RegularButton from "../Shared/RegularButton/RegularButton";
-import RegularInput from "../Shared/RegularInput/RegularInput";
+import { colors } from "@/constants/colors";
+import ContactLink from "../Shared/ContactLink/ContactLink";
 import HeaderText from "../Shared/HeaderText/HeaderText";
 
 import {
@@ -9,16 +9,10 @@ import {
   PlatformText,
   RegularTextWrapper,
   RowWrapper,
-  canvasStyles,
 } from "./Hero.styles";
-import { useState } from "react";
-import { useSubmitEmail } from "@/api/hooks/useSubmitEmail";
-import ReactCanvasConfetti from "react-canvas-confetti";
+
 
 const Hero = () => {
-  const [email, setEmail] = useState("");
-
-  const { handleSubmit, getInstance } = useSubmitEmail(email, setEmail);
 
   return (
     <HeroWrapper>
@@ -44,13 +38,7 @@ const Hero = () => {
         <HeaderText text="Join our beta test now and unlock a world of opportunities for professional growth, networking, and impactful collaborations." />
       </RegularTextWrapper>
       <RowWrapper>
-        <RegularInput
-          placeholder="Enter your email"
-          data={email}
-          setData={setEmail}
-        />
-        <RegularButton text="Join Beta" handleClick={handleSubmit} />
-        <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
+        <ContactLink href="https://app.teameights.com"  width="100%" text="Join Beta" background={colors.GREEN_NORMAL} />
       </RowWrapper>
     </HeroWrapper>
   );

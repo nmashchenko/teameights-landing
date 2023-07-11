@@ -19,6 +19,8 @@ export const HeroWrapper = styled.div`
 export const RowWrapper = styled.div`
   display: flex;
   gap: 16px;
+  width: 100%;
+  max-width: 356px;
 
   justify-content: center;
   align-items: center;
