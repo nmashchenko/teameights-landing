@@ -15,7 +15,7 @@ export const overviewData = [
     alt: "man behind pc",
     header: "Target Audience",
     description:
-      "Platform is the perfect fit for developers, designers, project managers and companies.",
+      "Our platform caters to the diverse needs of the tech and development community.",
   },
   {
     icon: stars,

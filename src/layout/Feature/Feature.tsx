@@ -12,14 +12,24 @@ import { Cards } from "@/components/Shared/Interfaces/cards.interface";
 const FeatureLayout = ({ cardsData }: { cardsData: Cards }) => {
   return (
     <FeatureLayoutContainer>
-      <MainImage src={cardsData.image} alt={"Platform image"} loading="eager" />
+      <MainImage
+        src={cardsData.image}
+        alt={"Platform image"}
+        loading="eager"
+        placeholder="blur"
+      />
 
       <CardsContainer>
         {cardsData.cards.map((card, index) => (
           <Card key={index}>
             <GradientText text={card.header} textType="small" />
             <Description>{card.description}</Description>
-            <SubImage src={card.cardImage} alt={card.header} />
+            <SubImage
+              src={card.cardImage}
+              alt={card.header}
+              placeholder="blur"
+              loading="lazy"
+            />
           </Card>
         ))}
       </CardsContainer>

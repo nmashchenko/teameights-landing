@@ -7,23 +7,30 @@ import {
 import Image from "next/image";
 import ArrowRight from "@/assets/Arrows/ArrowRight";
 import GradientText from "@/components/Shared/GradientText/GradientText";
-import Link from "next/link";
+import { useRouter } from "next/router";
+("react-scroll");
 
 const OverviewCard = ({ element }: { element: any }) => {
+  const router = useRouter();
   return (
-    <Card onClick={() => console.log(1)}>
+    <Card>
       <InfoContainer>
         <Image src={element.icon} alt={element.alt} width={36} height={36} />
         <GradientText text={element.header} textType="small" />
         <Description>{element.description}</Description>
       </InfoContainer>
       <div>
-        <Link href="/info" style={{ textDecoration: "none" }}>
-          <LearnButton>
-            Learn more
-            <ArrowRight />
-          </LearnButton>
-        </Link>
+        <LearnButton
+          onClick={() =>
+            router.push({
+              pathname: "/info",
+              query: { section: element.header },
+            })
+          }
+        >
+          Learn more
+          <ArrowRight />
+        </LearnButton>
       </div>
     </Card>
   );

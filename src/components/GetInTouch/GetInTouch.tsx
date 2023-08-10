@@ -21,7 +21,7 @@ const GetInTouch = () => {
       withDescription={true}
     >
       <ImagesWrapper>
-        <MemberImage src={all} alt={"all"} loading="eager" />
+        <MemberImage src={all} alt={"all"} loading="eager" placeholder="blur" />
       </ImagesWrapper>
       <RegularTextWrapper>
         <HeaderText text="We're currently looking for developers and sponsors, who share our vision for the future of the tech industry. If you're interested in joining our team or sponsorship, please contact us to learn more about how you can get involved. " />
